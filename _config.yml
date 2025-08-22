@@ -3,23 +3,24 @@
 # -----------------------------------------------------------------------------
 
 title: blank # the website title (if blank, full name will be used instead)
-first_name: You
-middle_name: R.
-last_name: Name
+first_name: Noushin
+middle_name: 
+last_name: Omidvar
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  Applied Machine Learning Scientist passionate about transforming chemistry and materials discovery with AI. 
+  I specialize in graph neural networks, generative optimization, and explainable AI, with a focus on 
+  electrolyte design for next-generation batteries. My work bridges computational chemistry and applied 
+  machine learning to accelerate breakthroughs in energy and science.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
+keywords:  # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: letter-n.png # the PNG image used as the favicon (place in /assets/img/)
 
-url: https://alshedivat.github.io # the base hostname & protocol for your site
-baseurl: /al-folio # the subpath of your site, e.g. /blog/. Leave blank for root
+url: https://noushin-omidvar.github.io # the base hostname & protocol for your site
+baseurl:  # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
@@ -29,7 +30,7 @@ back_to_top: true # set to false to disable the back to top button
 # -----------------------------------------------------------------------------
 
 # repo color theme
-repo_theme_light: default # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+repo_theme_light: swift # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 repo_theme_dark: dark # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 repo_trophies:
   enabled: true
@@ -86,8 +87,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: al-folio # blog_name will be displayed in your blog page
-blog_description: a simple whitespace theme for academics
+blog_name: AI, Aha! # blog_name will be displayed in your blog page
+blog_description: Sharing my journey as a machine learning scientist — the wins, the stumbles, and the lessons learned while exploring how AI can push the boundaries of science.
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -191,6 +192,11 @@ exclude:
   - README.md
   - readme_preview/
   - vendor
+  # Temporarily disabled pages
+  - _pages/profiles.md        # People/team page
+  - _pages/teaching.md        # Teaching experience
+  - _pages/repositories.md    # GitHub repositories
+  - _pages/dropdown.md        # Dropdown menu
 keep_files:
   - CNAME
   - .nojekyll
