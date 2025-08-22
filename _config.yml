@@ -198,7 +198,7 @@ exclude:
   - _pages/repositories.md    # GitHub repositories
   - _pages/dropdown.md        # Dropdown menu
 keep_files:
-  - CNAME
+  #- CNAME
   - .nojekyll
 
 # Plug-ins
