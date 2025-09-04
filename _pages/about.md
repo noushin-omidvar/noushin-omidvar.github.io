@@ -36,7 +36,7 @@ I’m an Applied scientist who loves **teaching machines to understand molecules
 
 I’ve traveled through both **academia** (Ph.D. in Chemical Engineering at Virginia Tech) and **industry** (Aionics Inc.), always chasing the same goal: using **machine learning as a tool for discovery**. For me, the exciting part isn’t just building models — it’s uncovering the hidden rules of nature that those models reveal.
 
-When I’m not coding or analyzing molecules, I enjoy mentoring, collaborating across disciplines, and **asking big “what if?” questions** that push science forward.
+When I’m not coding or analyzing molecules, I enjoy collaborating across disciplines, and **asking big “what if?” questions** that push science forward.
 
 **Areas of interest:** AI for Science & Engineering, Cheminformatics & Molecular Modeling, Optimization & Generative Design, Explainable & Interpretable AI 
 
