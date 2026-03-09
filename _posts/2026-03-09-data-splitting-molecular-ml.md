@@ -10,6 +10,8 @@ toc:
   beginning: true
 ---
 
+While building molecular property prediction models, I noticed something surprising: many models that looked extremely accurate under random data splits became far less impressive when evaluated under structure-aware splits.
+
 In molecular machine learning, most discussions revolve around model architectures:
 
 - Graph neural networks
@@ -30,6 +32,28 @@ Understanding this issue is essential for anyone working in:
 - molecular property prediction
 - cheminformatics
 - catalyst or electrolyte design
+
+---
+
+## Why I Started Thinking About This Problem
+
+This topic became much more concrete for me while working on molecular property models.
+
+While reviewing literature and building models myself, I noticed that **random train/test splits were frequently used as the default evaluation protocol**. Many papers reported very strong performance metrics under these splits.
+
+However, when I started experimenting with different evaluation strategies, something interesting happened.
+
+When the same models were evaluated using **structure-aware splits**, such as scaffold or similarity-based splits, the performance often dropped — sometimes significantly.
+
+This raised an important question:
+
+> Were the models truly learning generalizable chemical relationships, or were they benefiting from structural similarity between training and test molecules?
+
+Because molecules often exist in closely related families, random splits can easily place variants of the same scaffold in both training and test sets. In such cases, models may simply interpolate between very similar molecules rather than truly generalize.
+
+That observation motivated this post.
+
+To illustrate the issue concretely, I use the **ESOL dataset**, a widely used molecular machine learning benchmark for predicting aqueous solubility.
 
 ---
 
@@ -170,13 +194,16 @@ For this reason, many recent studies recommend evaluating models across **multip
 ## Visualizing Chemical Space
 
 One powerful way to understand split strategies is to visualize molecules in chemical space.
-Molecules are projected into 2D using UMAP on Morgan fingerprints, then colored by their split assignment.
+
+In the following experiment, we use the **ESOL solubility dataset**, which contains ~1100 molecules with measured aqueous solubility.
+
+Molecules are projected into 2D using UMAP on Morgan fingerprints and colored by their split assignment.
 
 The three panels below immediately reveal the core problem:
 
-- **Random split** — train and test points are intermixed across the entire chemical space
-- **Scaffold split** — entire structural families are withheld from training
-- **Cluster split** — entire chemical neighborhoods are absent from the training set
+- **Random split** — train and test points are intermixed across chemical space
+- **Scaffold split** — structural families are withheld from training
+- **Cluster split** — chemical neighborhoods are absent from training
 
 **Figure 1 — Chemical space visualization under different split strategies**
 
@@ -406,6 +433,38 @@ plt.show()
 <div class="caption">
   Figure 3 &mdash; Train-test Tanimoto similarity distribution (ESOL dataset). Random splits leave highly similar molecules in test. Scaffold and cluster splits shift the distribution lower, forcing genuine extrapolation.
 </div>
+
+---
+
+## Beyond Random and Scaffold Splits: Out-of-Distribution Evaluation
+
+The discussion around split strategies is part of a broader challenge in molecular machine learning:
+
+**out-of-distribution (OOD) generalization**.
+
+In many real discovery workflows, models must predict properties for molecules that lie outside the distribution of the training dataset.
+
+Examples include:
+
+- new scaffolds in drug discovery
+- unexplored electrolyte chemistries
+- new catalyst families
+- novel materials
+
+Several evaluation strategies attempt to approximate this challenge:
+
+**Scaffold splits**
+Test transfer to new structural backbones.
+
+**Cluster splits**
+Test transfer across chemical space neighborhoods.
+
+**Temporal splits**
+Train on earlier molecules and test on molecules discovered later. This approach is especially common in medicinal chemistry benchmarks, where chemical series evolve over time.
+
+Each of these attempts to simulate different forms of **distribution shift**.
+
+Increasingly, molecular ML papers report results across **multiple splits** rather than relying on a single evaluation protocol. A model that performs well across multiple splits is far more likely to be useful in real discovery settings.
 
 ---
 
