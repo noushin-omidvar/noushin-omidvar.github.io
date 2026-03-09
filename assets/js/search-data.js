@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{
+        },{id: "post-why-data-splitting-matters-in-molecular-machine-learning",
+        
+          title: "Why Data Splitting Matters in Molecular Machine Learning",
+        
+        description: "Random Splits, Scaffold Splits, and Cluster Splits Explained",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/data-splitting-molecular-ml/";
+          
+        },
+      },{
         id: 'social-email',
         title: 'email',
         section: 'Socials',
