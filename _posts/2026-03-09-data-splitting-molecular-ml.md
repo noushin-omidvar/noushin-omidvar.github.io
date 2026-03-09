@@ -12,6 +12,8 @@ toc:
 
 While building molecular property prediction models, I noticed something surprising: many models that looked extremely accurate under random data splits became far less impressive when evaluated under structure-aware splits.
 
+This observation led me to question something that is often treated as a minor implementation detail in machine learning workflows: **how we split the data.**
+
 In molecular machine learning, most discussions revolve around model architectures:
 
 - Graph neural networks
@@ -53,7 +55,7 @@ Because molecules often exist in closely related families, random splits can eas
 
 That observation motivated this post.
 
-To illustrate the issue concretely, I use the **ESOL dataset**, a widely used molecular machine learning benchmark for predicting aqueous solubility.
+To illustrate the issue concretely, I use the **ESOL dataset**, a widely used molecular machine learning benchmark for predicting aqueous solubility. The dataset contains approximately 1100 small organic molecules with experimentally measured solubility values, making it a convenient and widely used benchmark for evaluating molecular property prediction models.
 
 ---
 
@@ -179,7 +181,9 @@ Compared to scaffold splits, cluster splits often produce:
 
 ## Comparing Split Strategies
 
-Each splitting strategy tests a different capability of the model.
+Each splitting strategy evaluates a different aspect of model behavior.
+
+Some splits measure how well a model can interpolate between similar molecules, while others test whether it can generalize to entirely new chemical structures.
 
 | Split Strategy | What It Evaluates                      |
 | -------------- | -------------------------------------- |
@@ -187,7 +191,7 @@ Each splitting strategy tests a different capability of the model.
 | Scaffold split | Transfer to new molecular backbones    |
 | Cluster split  | Transfer across chemical space         |
 
-For this reason, many recent studies recommend evaluating models across **multiple split strategies**.
+Because each split captures a different type of generalization challenge, many modern molecular ML studies evaluate models across **multiple splitting strategies**.
 
 ---
 
@@ -199,7 +203,7 @@ In the following experiment, we use the **ESOL solubility dataset**, which conta
 
 Molecules are projected into 2D using UMAP on Morgan fingerprints and colored by their split assignment.
 
-The three panels below immediately reveal the core problem:
+The three panels below illustrate how dramatically the evaluation setting can change depending on the split strategy.
 
 - **Random split** — train and test points are intermixed across chemical space
 - **Scaffold split** — structural families are withheld from training
@@ -290,7 +294,10 @@ plt.show()
 
 ## Model Performance Across Split Strategies
 
-Does the evaluation strategy actually change reported model performance?
+The visualization above already hints that different splits create very different evaluation scenarios.
+
+But does this actually affect model performance?
+
 Almost always, yes.
 
 The bar chart below shows test RMSE for the same XGBoost model evaluated under each split.
@@ -494,4 +501,18 @@ A model's reported accuracy only makes sense in the context of how the data was 
 
 If the goal is molecular discovery, the latter matters much more.
 
-The lesson is simple: in molecular machine learning, model performance numbers only make sense when we understand the evaluation split behind them.
+The lesson is simple: in molecular machine learning, model performance numbers only make sense when we understand the **evaluation protocol behind them**.
+
+Random splits mostly measure interpolation between similar molecules.
+
+Scaffold and cluster splits provide a more realistic test of **generalization across chemical space**.
+
+As molecular machine learning continues to influence drug discovery, materials design, and chemical engineering, careful evaluation will be just as important as model architecture.
+
+---
+
+## Reproducibility
+
+All experiments in this post were performed using the ESOL dataset with RDKit molecular fingerprints and standard Python machine learning libraries.
+
+The code used to generate the splits, visualizations, and model evaluations is available in the accompanying repository.
