@@ -250,7 +250,12 @@ plt.savefig("fig1_chemical_space.png", dpi=150, bbox_inches="tight")
 plt.show()
 ```
 
-_Molecules are projected into two-dimensional chemical space using UMAP on Morgan fingerprints. Random splits distribute training and testing molecules throughout the same regions. Scaffold and cluster splits deliberately hold out entire structural regions, creating a more realistic generalization challenge._
+{% include figure.liquid
+   path="assets/img/posts/fig1_chemical_space.png"
+   alt="Chemical space visualization under random, scaffold, and cluster splits"
+   caption="Figure 1 — Chemical space visualization under different split strategies. Molecules are projected into 2D using UMAP on Morgan fingerprints (ESOL dataset). Random splits mix train and test molecules across the same regions. Scaffold and cluster splits hold out entire structural areas."
+   class="img-fluid rounded"
+%}
 
 ---
 
@@ -321,7 +326,12 @@ plt.savefig("fig2_performance.png", dpi=150, bbox_inches="tight")
 plt.show()
 ```
 
-_The same model evaluated under different splitting protocols can produce significantly different error estimates. Random splits typically appear easiest because test molecules remain highly similar to training molecules._
+{% include figure.liquid
+   path="assets/img/posts/fig2_performance.png"
+   alt="XGBoost RMSE under random, scaffold, and cluster splits on ESOL"
+   caption="Figure 2 — Model performance depends strongly on the split strategy. XGBoost RMSE on ESOL: Random ≈ 1.08, Scaffold ≈ 1.64, Cluster ≈ 1.54 log mol/L. The same model can appear deceptively accurate under random splits."
+   class="img-fluid rounded"
+%}
 
 ---
 
@@ -384,7 +394,12 @@ plt.savefig("fig3_similarity.png", dpi=150, bbox_inches="tight")
 plt.show()
 ```
 
-_Random splits often place highly similar molecules in both training and testing sets. Scaffold and cluster splits reduce this similarity, forcing the model to extrapolate beyond familiar chemical structures._
+{% include figure.liquid
+   path="assets/img/posts/fig3_similarity.png"
+   alt="Max Tanimoto similarity between test molecules and training set under each split strategy"
+   caption="Figure 3 — Train-test Tanimoto similarity distribution (ESOL dataset). Random splits leave highly similar molecules in test. Scaffold and cluster splits shift the distribution lower, forcing genuine extrapolation."
+   class="img-fluid rounded"
+%}
 
 ---
 
