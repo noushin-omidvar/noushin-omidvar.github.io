@@ -250,12 +250,14 @@ plt.savefig("fig1_chemical_space.png", dpi=150, bbox_inches="tight")
 plt.show()
 ```
 
-{% include figure.liquid
-   path="assets/img/posts/fig1_chemical_space.png"
-   alt="Chemical space visualization under random, scaffold, and cluster splits"
-   caption="Figure 1 — Chemical space visualization under different split strategies. Molecules are projected into 2D using UMAP on Morgan fingerprints (ESOL dataset). Random splits mix train and test molecules across the same regions. Scaffold and cluster splits hold out entire structural areas."
-   class="img-fluid rounded"
-%}
+<div class="row mt-3">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/posts/fig1_chemical_space.png" alt="Chemical space under random, scaffold, and cluster splits" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  Figure 1 &mdash; Chemical space visualization under different split strategies. Molecules are projected into 2D using UMAP on Morgan fingerprints (ESOL dataset). Random splits mix train and test molecules across the same regions. Scaffold and cluster splits hold out entire structural areas.
+</div>
 
 ---
 
@@ -326,12 +328,14 @@ plt.savefig("fig2_performance.png", dpi=150, bbox_inches="tight")
 plt.show()
 ```
 
-{% include figure.liquid
-   path="assets/img/posts/fig2_performance.png"
-   alt="XGBoost RMSE under random, scaffold, and cluster splits on ESOL"
-   caption="Figure 2 — Model performance depends strongly on the split strategy. XGBoost RMSE on ESOL: Random ≈ 1.08, Scaffold ≈ 1.64, Cluster ≈ 1.54 log mol/L. The same model can appear deceptively accurate under random splits."
-   class="img-fluid rounded"
-%}
+<div class="row mt-3">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/posts/fig2_performance.png" alt="XGBoost RMSE under random, scaffold, and cluster splits on ESOL" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  Figure 2 &mdash; Model performance depends strongly on the split strategy. XGBoost RMSE on ESOL: Random 1.08, Scaffold 1.64, Cluster 1.54 log mol/L. The same model can appear deceptively accurate under random splits.
+</div>
 
 ---
 
@@ -394,12 +398,14 @@ plt.savefig("fig3_similarity.png", dpi=150, bbox_inches="tight")
 plt.show()
 ```
 
-{% include figure.liquid
-   path="assets/img/posts/fig3_similarity.png"
-   alt="Max Tanimoto similarity between test molecules and training set under each split strategy"
-   caption="Figure 3 — Train-test Tanimoto similarity distribution (ESOL dataset). Random splits leave highly similar molecules in test. Scaffold and cluster splits shift the distribution lower, forcing genuine extrapolation."
-   class="img-fluid rounded"
-%}
+<div class="row mt-3">
+  <div class="col-sm mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/posts/fig3_similarity.png" alt="Max Tanimoto similarity between test molecules and training set" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+<div class="caption">
+  Figure 3 &mdash; Train-test Tanimoto similarity distribution (ESOL dataset). Random splits leave highly similar molecules in test. Scaffold and cluster splits shift the distribution lower, forcing genuine extrapolation.
+</div>
 
 ---
 
