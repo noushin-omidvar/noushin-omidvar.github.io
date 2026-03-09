@@ -5,7 +5,8 @@ layout: default
   <header class="post-header">
     <h1 class="post-title" style="font-weight:lighter; font-size: 60px">
       {% if site.title == 'blank' %}
-        {{ site.first_name }}{{ site.middle_name }}
+        {{ site.first_name -}}
+        {{- site.middle_name }}
         {{ site.last_name }}
       {% else %}
         {{ site.title }}
@@ -38,7 +39,7 @@ layout: default
       </div>
     {% endif %}
     <br>
-    <div class="clearfix" style="margin-top: 50p"x">{{ content }}</div>
+    <div class="clearfix" style="margin-top: 50px">{{ content }}</div>
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}

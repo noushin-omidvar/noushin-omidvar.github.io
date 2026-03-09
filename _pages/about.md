@@ -2,9 +2,8 @@
 layout: about
 title: about
 permalink: /
-subtitle: Applied ML Scientist, Aionics Inc. 
+subtitle: Applied ML Scientist, Aionics Inc.
 nav_order: 1
-
 
 profile:
   align: right
@@ -29,16 +28,12 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-
-
-
 I’m an Applied scientist who loves **teaching machines to understand molecules**. My work brings together AI and chemistry to imagine new materials — from **graph neural networks** that learn bonding patterns to **generative models** that design better electrolytes for the next generation of batteries.
 
 I’ve traveled through both **academia** (Ph.D. in Chemical Engineering at Virginia Tech) and **industry** (Aionics Inc.), always chasing the same goal: using **machine learning as a tool for discovery**. For me, the exciting part isn’t just building models — it’s uncovering the hidden rules of nature that those models reveal.
 
 When I’m not coding or analyzing molecules, I enjoy collaborating across disciplines, and **asking big “what if?” questions** that push science forward.
 
-**Areas of interest:** AI for Science & Engineering, Cheminformatics & Molecular Modeling, Optimization & Generative Design, Explainable & Interpretable AI 
+**Areas of interest:** AI for Science & Engineering, Cheminformatics & Molecular Modeling, Optimization & Generative Design, Explainable & Interpretable AI
 
 ---
-

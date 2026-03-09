@@ -89,11 +89,11 @@ A scaffold represents the central molecular backbone after removing side chains.
 
 **Example:**
 
-| Molecule family          | Scaffold        |
-|--------------------------|-----------------|
-| benzene derivatives      | benzene         |
-| pyridine derivatives     | pyridine        |
-| naphthalene derivatives  | naphthalene     |
+| Molecule family         | Scaffold    |
+| ----------------------- | ----------- |
+| benzene derivatives     | benzene     |
+| pyridine derivatives    | pyridine    |
+| naphthalene derivatives | naphthalene |
 
 When using scaffold splitting:
 
@@ -157,11 +157,11 @@ Compared to scaffold splits, cluster splits often produce:
 
 Each splitting strategy tests a different capability of the model.
 
-| Split Strategy  | What It Evaluates                              |
-|-----------------|------------------------------------------------|
-| Random split    | Interpolation within similar molecules         |
-| Scaffold split  | Transfer to new molecular backbones            |
-| Cluster split   | Transfer across chemical space                 |
+| Split Strategy | What It Evaluates                      |
+| -------------- | -------------------------------------- |
+| Random split   | Interpolation within similar molecules |
+| Scaffold split | Transfer to new molecular backbones    |
+| Cluster split  | Transfer across chemical space         |
 
 For this reason, many recent studies recommend evaluating models across **multiple split strategies**.
 
@@ -250,7 +250,7 @@ plt.savefig("fig1_chemical_space.png", dpi=150, bbox_inches="tight")
 plt.show()
 ```
 
-*Molecules are projected into two-dimensional chemical space using UMAP on Morgan fingerprints. Random splits distribute training and testing molecules throughout the same regions. Scaffold and cluster splits deliberately hold out entire structural regions, creating a more realistic generalization challenge.*
+_Molecules are projected into two-dimensional chemical space using UMAP on Morgan fingerprints. Random splits distribute training and testing molecules throughout the same regions. Scaffold and cluster splits deliberately hold out entire structural regions, creating a more realistic generalization challenge._
 
 ---
 
@@ -321,7 +321,7 @@ plt.savefig("fig2_performance.png", dpi=150, bbox_inches="tight")
 plt.show()
 ```
 
-*The same model evaluated under different splitting protocols can produce significantly different error estimates. Random splits typically appear easiest because test molecules remain highly similar to training molecules.*
+_The same model evaluated under different splitting protocols can produce significantly different error estimates. Random splits typically appear easiest because test molecules remain highly similar to training molecules._
 
 ---
 
@@ -384,7 +384,7 @@ plt.savefig("fig3_similarity.png", dpi=150, bbox_inches="tight")
 plt.show()
 ```
 
-*Random splits often place highly similar molecules in both training and testing sets. Scaffold and cluster splits reduce this similarity, forcing the model to extrapolate beyond familiar chemical structures.*
+_Random splits often place highly similar molecules in both training and testing sets. Scaffold and cluster splits reduce this similarity, forcing the model to extrapolate beyond familiar chemical structures._
 
 ---
 
