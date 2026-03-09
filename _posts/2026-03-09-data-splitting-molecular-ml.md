@@ -35,8 +35,6 @@ Understanding this issue is essential for anyone working in:
 - cheminformatics
 - catalyst or electrolyte design
 
----
-
 ## Why I Started Thinking About This Problem
 
 This topic became much more concrete for me while working on molecular property models.
@@ -56,8 +54,6 @@ Because molecules often exist in closely related families, random splits can eas
 That observation motivated this post.
 
 To illustrate the issue concretely, I use the **ESOL dataset**, a widely used molecular machine learning benchmark for predicting aqueous solubility. The dataset contains approximately 1100 small organic molecules with experimentally measured solubility values, making it a convenient and widely used benchmark for evaluating molecular property prediction models.
-
----
 
 ## The Hidden Problem in Molecular ML
 
@@ -83,8 +79,6 @@ This creates an important issue:
 
 As a result, reported model performance may be overly optimistic.
 
----
-
 ## Random Splits: The Default Approach
 
 The most common machine learning strategy is the random split.
@@ -102,8 +96,6 @@ However, in molecular datasets random splits often produce **structural leakage*
 - the model effectively sees variants of test molecules during training
 
 Therefore random splits mostly measure a model's ability to **interpolate** between similar molecules, rather than predict truly novel chemistry.
-
----
 
 ## Scaffold Splitting: Testing Structural Generalization
 
@@ -130,8 +122,6 @@ This forces the model to predict properties for entirely new structural families
 
 Often, model performance decreases under scaffold splits — but this reflects more realistic generalization testing.
 
----
-
 ## Limitations of Scaffold Splitting
 
 Although scaffold splitting is widely used in benchmarks such as [MoleculeNet](https://moleculenet.org/), it is not perfect.
@@ -151,8 +141,6 @@ Some scaffolds appear frequently while others are rare, which can produce uneven
 Two molecules may have different scaffolds but very similar physical properties. Conversely, molecules sharing a scaffold may exhibit very different behavior due to substituent effects.
 
 For these reasons, scaffold splitting is useful but not universally optimal.
-
----
 
 ## Cluster Splitting: A Chemical Space Perspective
 
@@ -177,8 +165,6 @@ Compared to scaffold splits, cluster splits often produce:
 - more balanced partitions
 - smoother representation of molecular diversity
 
----
-
 ## Comparing Split Strategies
 
 Each splitting strategy evaluates a different aspect of model behavior.
@@ -192,8 +178,6 @@ Some splits measure how well a model can interpolate between similar molecules, 
 | Cluster split  | Transfer across chemical space         |
 
 Because each split captures a different type of generalization challenge, many modern molecular ML studies evaluate models across **multiple splitting strategies**.
-
----
 
 ## Visualizing Chemical Space
 
@@ -290,8 +274,6 @@ plt.show()
   Figure 1 &mdash; Chemical space visualization under different split strategies. Molecules are projected into 2D using UMAP on Morgan fingerprints (ESOL dataset). Random splits mix train and test molecules across the same regions. Scaffold and cluster splits hold out entire structural areas.
 </div>
 
----
-
 ## Model Performance Across Split Strategies
 
 The visualization above already hints that different splits create very different evaluation scenarios.
@@ -371,8 +353,6 @@ plt.show()
   Figure 2 &mdash; Model performance depends strongly on the split strategy. XGBoost RMSE on ESOL: Random 1.08, Scaffold 1.64, Cluster 1.54 log mol/L. The same model can appear deceptively accurate under random splits.
 </div>
 
----
-
 ## Train-Test Similarity Analysis
 
 Why do random splits look easier?
@@ -441,8 +421,6 @@ plt.show()
   Figure 3 &mdash; Train-test Tanimoto similarity distribution (ESOL dataset). Random splits leave highly similar molecules in test. Scaffold and cluster splits shift the distribution lower, forcing genuine extrapolation.
 </div>
 
----
-
 ## Beyond Random and Scaffold Splits: Out-of-Distribution Evaluation
 
 The discussion around split strategies is part of a broader challenge in molecular machine learning:
@@ -473,8 +451,6 @@ Each of these attempts to simulate different forms of **distribution shift**.
 
 Increasingly, molecular ML papers report results across **multiple splits** rather than relying on a single evaluation protocol. A model that performs well across multiple splits is far more likely to be useful in real discovery settings.
 
----
-
 ## Practical Takeaways
 
 Several best practices are emerging in molecular ML.
@@ -485,8 +461,6 @@ Several best practices are emerging in molecular ML.
 - **Visualize chemical space coverage**
 
 These steps help ensure that models genuinely generalize to new molecules rather than memorizing known chemistry.
-
----
 
 ## Final Thoughts
 
@@ -508,8 +482,6 @@ Random splits mostly measure interpolation between similar molecules.
 Scaffold and cluster splits provide a more realistic test of **generalization across chemical space**.
 
 As molecular machine learning continues to influence drug discovery, materials design, and chemical engineering, careful evaluation will be just as important as model architecture.
-
----
 
 ## Reproducibility
 
