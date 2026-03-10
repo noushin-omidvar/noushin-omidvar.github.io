@@ -43,7 +43,7 @@ While reviewing literature and building models myself, I noticed that **random t
 
 However, when I started experimenting with different evaluation strategies, something interesting happened.
 
-When the same models were evaluated using **structure-aware splits**, such as scaffold or similarity-based splits, the performance often dropped — sometimes significantly.
+When the same models were evaluated using **structure-aware splits**, such as scaffold or similarity-based splits, the performance often dropped sometimes significantly.
 
 This raised an important question:
 
@@ -483,8 +483,3 @@ Scaffold and cluster splits provide a more realistic test of **generalization ac
 
 As molecular machine learning continues to influence drug discovery, materials design, and chemical engineering, careful evaluation will be just as important as model architecture.
 
-## Reproducibility
-
-All experiments in this post were performed using the ESOL dataset with RDKit molecular fingerprints and standard Python machine learning libraries.
-
-The code used to generate the splits, visualizations, and model evaluations is available in the accompanying repository.
