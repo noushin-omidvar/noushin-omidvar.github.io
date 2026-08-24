@@ -16,8 +16,8 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "nav-blog",
-          title: "blog",
+        },{id: "nav-writing",
+          title: "writing",
           description: "",
           section: "Navigation",
           handler: () => {
@@ -53,14 +53,14 @@ ninja.data = [{
         title: 'GitHub',
         section: 'Socials',
         handler: () => {
-          window.open("https://github.com/noushin-omidvar# your GitHub user name", "_blank");
+          window.open("https://github.com/noushin-omidvar", "_blank");
         },
       },{
         id: 'social-linkedin',
         title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
-          window.open("https://www.linkedin.com/in/noushin-omidvar# your LinkedIn user name", "_blank");
+          window.open("https://www.linkedin.com/in/noushin-omidvar", "_blank");
         },
       },{
         id: 'social-scholar',
@@ -74,7 +74,7 @@ ninja.data = [{
         title: 'X',
         section: 'Socials',
         handler: () => {
-          window.open("https://twitter.com/NoushinOmidvar# your X handle", "_blank");
+          window.open("https://twitter.com/NoushinOmidvar", "_blank");
         },
       },{
       id: 'light-theme',
