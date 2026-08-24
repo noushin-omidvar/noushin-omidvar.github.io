@@ -28,12 +28,12 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I’m an Applied scientist who loves **teaching machines to understand molecules**. My work brings together AI and chemistry to imagine new materials — from **graph neural networks** that learn bonding patterns to **generative models** that design better electrolytes for the next generation of batteries.
+## Machine learning for the messy part of science.
 
-I’ve traveled through both **academia** (Ph.D. in Chemical Engineering at Virginia Tech) and **industry** (Aionics Inc.), always chasing the same goal: using **machine learning as a tool for discovery**. For me, the exciting part isn’t just building models — it’s uncovering the hidden rules of nature that those models reveal.
+I’m **Noushin Omidvar**, an applied ML scientist working across **materials, molecules, and engineering**.
 
-When I’m not coding or analyzing molecules, I enjoy collaborating across disciplines, and **asking big “what if?” questions** that push science forward.
+I build machine learning systems for problems where **data is limited, experiments are expensive, and prediction alone isn’t enough**.
 
-**Areas of interest:** AI for Science & Engineering, Cheminformatics & Molecular Modeling, Optimization & Generative Design, Explainable & Interpretable AI
+My work spans **scientific ML, materials informatics, experimental decision support, and optimization** — with one goal: helping scientists **learn faster, search smarter, and decide what to test next**.
 
 ---
