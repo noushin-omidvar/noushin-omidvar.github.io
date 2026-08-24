@@ -8,14 +8,12 @@ middle_name:
 last_name: Omidvar
 contact_note: >
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Applied Machine Learning Scientist passionate about transforming chemistry and materials discovery with AI. 
-  I specialize in graph neural networks, generative optimization, and explainable AI, with a focus on 
-  electrolyte design for next-generation batteries. My work bridges computational chemistry and applied 
-  machine learning to accelerate breakthroughs in energy and science.
+  Applied machine learning scientist working across scientific ML, materials informatics, molecular modeling,
+  experimental decision support, and optimization for scientific and engineering R&D.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: # add your own keywords or leave empty
+keywords: scientific machine learning, AI for science, materials informatics, molecular machine learning, materials science, chemical engineering, experimental decision support, interpretable machine learning, optimization
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: letter-n.png # the PNG image used as the favicon (place in /assets/img/)
 
@@ -64,9 +62,9 @@ max_width: 930px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
+serve_schema_org: true # Include Schema.org in the HTML head
+og_image: https://noushin-omidvar.github.io/assets/img/prof_pic_color.png # Site-wide social preview image
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
