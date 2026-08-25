@@ -24,23 +24,28 @@ $pink-color: #f92080 !default;
 $pink-color-light: #ffdddd !default;
 $yellow-color: #efcc00 !default;
 
-$grey-color: #828282 !default;
-$grey-color-light: color.adjust($grey-color, $lightness: 40%);
-$grey-color-dark: #1c1c1d;
-$grey-900: #212529;
+$grey-color: #667385 !default;
+$grey-color-light: #e5e7ee !default;
+$grey-color-dark: #101827;
+$grey-900: #172033;
 
-// Brand / accent
-$teal-color: #0891b2 !default;       // primary accent (light mode)
-$teal-color-dark: #0e7490 !default;  // hover / pressed (light mode)
-$teal-color-bright: #22d3ee !default; // accent on dark backgrounds
+// Google I/O-inspired portfolio palette: crisp neutrals + optimistic Google colors
+$teal-color: #0b57d0 !default;        // Google blue / primary interaction
+$teal-color-dark: #0842a0 !default;   // hover / pressed
+$teal-color-bright: #8ab4f8 !default; // dark-mode blue
+$clay-color: #ea4335 !default;        // Google red
+$clay-color-bright: #f28b82 !default; // dark-mode red
+$aqua-color: #34a853 !default;        // Google green
+$aqua-color-bright: #81c995 !default; // dark-mode green
+$yellow-color: #fbbc04 !default;      // Google yellow
 
-$white-color: #ffffff !default;
-$black-color: #000000 !default;
+$white-color: #f8f9fa !default;
+$black-color: #202124 !default;
 
 // Theme colors
 
-$code-bg-color-light: rgba($purple-color, 0.05);
-$code-bg-color-dark: #2c3237 !default;
+$code-bg-color-light: rgba($teal-color, 0.06);
+$code-bg-color-dark: #172033 !default;
 
 // Font awesome location
 $fa-font-path: "../webfonts";

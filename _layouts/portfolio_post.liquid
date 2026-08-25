@@ -1,0 +1,573 @@
+---
+layout: default
+---
+
+<style>
+/* =========================================================
+   SELF-CONTAINED EDITORIAL POST SHELL
+   Intentionally overrides / hides the legacy al-folio shell.
+   ========================================================= */
+
+/* Hide inherited site chrome on article pages only */
+body:has(.no-post-shell) header,
+body:has(.no-post-shell) nav.navbar,
+body:has(.no-post-shell) .navbar,
+body:has(.no-post-shell) footer,
+body:has(.no-post-shell) .footer,
+body:has(.no-post-shell) .fixed-top,
+body:has(.no-post-shell) #navbar,
+body:has(.no-post-shell) .site-nav,
+body:has(.no-post-shell) .site-footer {
+  display: none !important;
+}
+
+/* Neutralize theme wrappers that can constrain width or paint surfaces */
+body:has(.no-post-shell) main,
+body:has(.no-post-shell) .container,
+body:has(.no-post-shell) .post,
+body:has(.no-post-shell) .post-content {
+  max-width: none !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+body:has(.no-post-shell) {
+  margin: 0 !important;
+  background: #ffffff !important;
+  color: #14202b !important;
+}
+
+/* ---------- Design tokens ---------- */
+.no-post-shell {
+  --ink: #14202b;
+  --body: #344047;
+  --muted: #748087;
+  --line: #dfe4e6;
+  --line-strong: #cfd6d9;
+  --blue: #315f74;
+  --blue-light: #9eb9c7;
+  --red: #c73a49;
+  --paper: #ffffff;
+  --paper-soft: #f7f8f7;
+  --code-paper: #f4f6f6;
+
+  min-height: 100vh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* ---------- Header copied in visual language of portfolio pages ---------- */
+.no-post-nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  background: rgba(255,255,255,.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.no-post-nav__inner {
+  width: min(calc(100% - 48px), 980px);
+  min-height: 62px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.no-post-brand {
+  color: var(--ink) !important;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  text-decoration: none !important;
+}
+
+.no-post-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.no-post-links a {
+  position: relative;
+  color: #7a858b !important;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none !important;
+}
+
+.no-post-links a::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #dfe4e6;
+  vertical-align: 2px;
+}
+
+.no-post-links a:hover {
+  color: var(--ink) !important;
+}
+
+.no-post-links a.active {
+  color: var(--ink) !important;
+  font-weight: 700;
+}
+
+.no-post-links a.active::before {
+  background: var(--red);
+}
+
+/* ---------- Article hero ---------- */
+.no-post-hero {
+  width: min(calc(100% - 48px), 980px);
+  margin-inline: auto;
+  padding: 76px 0 48px;
+  border-bottom: 1px solid var(--line);
+}
+
+.no-post-kicker {
+  margin: 0 0 15px;
+  color: var(--blue);
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .15em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.no-post-title {
+  max-width: 13.5ch;
+  margin: 0;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(56px, 6.2vw, 84px);
+  font-weight: 700;
+  line-height: .98;
+  letter-spacing: -.038em;
+  text-wrap: balance;
+}
+
+.no-post-dek {
+  max-width: 700px;
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: 19px;
+  line-height: 1.55;
+}
+
+.no-post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-top: 22px;
+  color: var(--muted);
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* ---------- Reading column ---------- */
+.no-post-body {
+  width: min(calc(100% - 48px), 760px);
+  margin-inline: auto;
+  padding: 52px 0 100px;
+}
+
+.no-post-body > :first-child {
+  margin-top: 0 !important;
+}
+
+.no-post-body p,
+.no-post-body li {
+  color: var(--body) !important;
+  font-size: 18px !important;
+  line-height: 1.78 !important;
+}
+
+.no-post-body p {
+  margin: 0 0 1.35em !important;
+}
+
+.no-post-body ul,
+.no-post-body ol {
+  margin: 1em 0 1.6em !important;
+  padding-left: 1.35em !important;
+}
+
+.no-post-body li + li {
+  margin-top: .3em !important;
+}
+
+.no-post-body h2,
+.no-post-body h3,
+.no-post-body h4 {
+  color: var(--ink) !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-weight: 700 !important;
+}
+
+.no-post-body h2 {
+  margin: 2.75em 0 .6em !important;
+  font-size: 40px !important;
+  line-height: 1.1 !important;
+  letter-spacing: -.025em !important;
+}
+
+.no-post-body h3 {
+  margin: 2.15em 0 .55em !important;
+  font-size: 28px !important;
+  line-height: 1.18 !important;
+}
+
+.no-post-body h4 {
+  margin: 1.8em 0 .5em !important;
+  font-size: 22px !important;
+  line-height: 1.25 !important;
+}
+
+.no-post-body strong {
+  color: var(--ink) !important;
+}
+
+.no-post-body a {
+  color: var(--blue) !important;
+  text-decoration: underline !important;
+  text-decoration-color: #afc1ca !important;
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: 3px !important;
+}
+
+.no-post-body a:hover {
+  color: var(--red) !important;
+  text-decoration-color: var(--red) !important;
+}
+
+.no-post-body hr {
+  border: 0 !important;
+  border-top: 1px solid var(--line) !important;
+  margin: 48px 0 !important;
+}
+
+.no-post-body blockquote {
+  margin: 32px 0 !important;
+  padding: 4px 0 4px 22px !important;
+  border-left: 3px solid var(--red) !important;
+  background: transparent !important;
+}
+
+.no-post-body blockquote p {
+  color: #566168 !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 21px !important;
+  line-height: 1.55 !important;
+}
+
+.no-post-body img {
+  display: block !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 34px auto !important;
+}
+
+/* ---------- First generated list = compact contents ---------- */
+.no-post-body > ul:first-child {
+  list-style: none !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0,1fr)) !important;
+  gap: 0 28px !important;
+  margin: 0 0 46px !important;
+  padding: 20px 0 !important;
+  border-top: 1px solid var(--line) !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+
+.no-post-body > ul:first-child li {
+  margin: 0 !important;
+  padding: 7px 0 !important;
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-size: 12px !important;
+  line-height: 1.45 !important;
+}
+
+.no-post-body > ul:first-child a {
+  text-decoration: none !important;
+}
+
+/* =========================================================
+   CODE: brute-force reset of legacy dark syntax highlighter.
+   This deliberately prioritizes readability over fancy colors.
+   ========================================================= */
+
+.no-post-body pre,
+.no-post-body code,
+.no-post-body .highlight,
+.no-post-body .highlight *,
+.no-post-body figure.highlight,
+.no-post-body figure.highlight *,
+.no-post-body div.highlight,
+.no-post-body div.highlight *,
+.no-post-body table.rouge-table,
+.no-post-body table.rouge-table *,
+.no-post-body .rouge-code,
+.no-post-body .rouge-code * {
+  text-shadow: none !important;
+}
+
+.no-post-body .highlight,
+.no-post-body figure.highlight,
+.no-post-body div.highlight,
+.no-post-body table.rouge-table {
+  display: block !important;
+  margin: 28px 0 36px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background: var(--code-paper) !important;
+  border: 1px solid var(--line-strong) !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+}
+
+.no-post-body pre,
+.no-post-body .highlight pre,
+.no-post-body figure.highlight pre,
+.no-post-body div.highlight pre,
+.no-post-body .rouge-code pre {
+  display: block !important;
+  margin: 0 !important;
+  padding: 22px 24px !important;
+  overflow-x: auto !important;
+  background: var(--code-paper) !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  color: #202a30 !important;
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
+  white-space: pre !important;
+}
+
+/* Reset EVERY syntax span first */
+.no-post-body pre *,
+.no-post-body .highlight *,
+.no-post-body .rouge-code *,
+.no-post-body .rouge-table * {
+  background: transparent !important;
+  color: #202a30 !important;
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-size: inherit !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+}
+
+/* Then add restrained, readable syntax colors */
+.no-post-body .highlight .c,
+.no-post-body .highlight .c1,
+.no-post-body .highlight .cm,
+.no-post-body .highlight .cp,
+.no-post-body .highlight .cs {
+  color: #7a858b !important;
+  font-style: italic !important;
+}
+
+.no-post-body .highlight .k,
+.no-post-body .highlight .kc,
+.no-post-body .highlight .kd,
+.no-post-body .highlight .kn,
+.no-post-body .highlight .kp,
+.no-post-body .highlight .kr,
+.no-post-body .highlight .kt {
+  color: #8c3d68 !important;
+  font-weight: 600 !important;
+}
+
+.no-post-body .highlight .s,
+.no-post-body .highlight .s1,
+.no-post-body .highlight .s2,
+.no-post-body .highlight .sb,
+.no-post-body .highlight .sc,
+.no-post-body .highlight .sd,
+.no-post-body .highlight .se,
+.no-post-body .highlight .sh,
+.no-post-body .highlight .si,
+.no-post-body .highlight .sr,
+.no-post-body .highlight .ss,
+.no-post-body .highlight .sx {
+  color: #2e725f !important;
+}
+
+.no-post-body .highlight .m,
+.no-post-body .highlight .mi,
+.no-post-body .highlight .mf,
+.no-post-body .highlight .mh,
+.no-post-body .highlight .mo,
+.no-post-body .highlight .il {
+  color: #b15a34 !important;
+}
+
+.no-post-body .highlight .nf,
+.no-post-body .highlight .fm,
+.no-post-body .highlight .na {
+  color: #345f9b !important;
+}
+
+.no-post-body .highlight .nb,
+.no-post-body .highlight .bp,
+.no-post-body .highlight .nc,
+.no-post-body .highlight .nn,
+.no-post-body .highlight .no {
+  color: #315f74 !important;
+}
+
+.no-post-body :not(pre) > code {
+  padding: .14em .38em !important;
+  background: #f1f3f3 !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 3px !important;
+  color: #26343d !important;
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-size: .88em !important;
+}
+
+/* ---------- Footer ---------- */
+.no-post-footer {
+  border-top: 1px solid var(--line);
+  background: #fff;
+}
+
+.no-post-footer__inner {
+  width: min(calc(100% - 48px), 980px);
+  margin-inline: auto;
+  padding: 36px 0 42px;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  color: var(--muted);
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11px;
+}
+
+.no-post-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.no-post-footer a {
+  color: var(--muted) !important;
+  text-decoration: none !important;
+}
+
+.no-post-footer a:hover {
+  color: var(--red) !important;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 720px) {
+  .no-post-nav__inner,
+  .no-post-hero,
+  .no-post-footer__inner {
+    width: min(calc(100% - 32px), 980px);
+  }
+
+  .no-post-body {
+    width: min(calc(100% - 32px), 760px);
+  }
+
+  .no-post-links {
+    gap: 12px;
+  }
+
+  .no-post-links a {
+    font-size: 12px;
+  }
+
+  .no-post-hero {
+    padding-top: 48px;
+  }
+
+  .no-post-body > ul:first-child {
+    grid-template-columns: 1fr !important;
+  }
+
+  .no-post-body p,
+  .no-post-body li {
+    font-size: 17px !important;
+  }
+
+  .no-post-footer__inner {
+    flex-direction: column;
+  }
+}
+</style>
+
+<div class="no-post-shell">
+
+  <nav class="no-post-nav" aria-label="Primary">
+    <div class="no-post-nav__inner">
+      <a class="no-post-brand" href="{{ '/' | relative_url }}">N.O.</a>
+
+      <div class="no-post-links">
+        <a href="{{ '/' | relative_url }}">about</a>
+        <a href="{{ '/#work' | relative_url }}">work</a>
+        <a href="{{ '/publications/' | relative_url }}">publications</a>
+        <a class="active" href="{{ '/blog/' | relative_url }}">writing</a>
+        <a href="{{ '/cv/' | relative_url }}">cv</a>
+      </div>
+    </div>
+  </nav>
+
+  <article>
+    <header class="no-post-hero">
+      <p class="no-post-kicker">
+        Writing{% if page.tags and page.tags.size > 0 %} · {{ page.tags | first }}{% endif %}
+      </p>
+
+      <h1 class="no-post-title">{{ page.title }}</h1>
+
+      {% if page.description %}
+        <p class="no-post-dek">{{ page.description }}</p>
+      {% elsif page.subtitle %}
+        <p class="no-post-dek">{{ page.subtitle }}</p>
+      {% endif %}
+
+      <div class="no-post-meta">
+        <span>{{ page.date | date: "%B %d, %Y" }}</span>
+        {% if page.tags and page.tags.size > 0 %}
+          <span>·</span>
+          <span>{{ page.tags | join: " · " }}</span>
+        {% endif %}
+      </div>
+    </header>
+
+    <div class="no-post-body">
+      {{ content }}
+    </div>
+  </article>
+
+  <footer class="no-post-footer">
+    <div class="no-post-footer__inner">
+      <span>© {{ site.time | date: "%Y" }} Noushin Omidvar</span>
+      <div class="no-post-footer__links">
+        {% if site.email %}<a href="mailto:{{ site.email }}">email</a>{% endif %}
+        {% if site.github_username %}<a href="https://github.com/{{ site.github_username }}">github</a>{% endif %}
+        {% if site.linkedin_username %}<a href="https://www.linkedin.com/in/{{ site.linkedin_username }}">linkedin</a>{% endif %}
+      </div>
+    </div>
+  </footer>
+
+</div>

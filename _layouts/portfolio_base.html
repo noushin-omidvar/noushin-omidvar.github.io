@@ -1,0 +1,50 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{% if page.title and page.title != "about" %}{{ page.title }} · {% endif %}Noushin Omidvar</title>
+  <meta name="description" content="{{ page.description | default: site.description | strip_html | escape }}">
+  <link rel="icon" href="{{ '/assets/img/letter-n.png' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/portfolio-site.css' | relative_url }}">
+</head>
+<body class="portfolio-site page-{{ page.permalink | default: page.title | slugify }}">
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="monogram" href="{{ '/' | relative_url }}" aria-label="Noushin Omidvar home">N.O.</a>
+    <nav class="links" aria-label="Primary">
+      <a href="{{ '/' | relative_url }}" {% if page.url == "/" %}class="active"{% endif %}><span class="dot"></span>about</a>
+      <a href="{{ '/' | relative_url }}#work"><span class="dot"></span>work</a>
+      <a href="{{ '/publications/' | relative_url }}" {% if page.url contains '/publications' %}class="active"{% endif %}><span class="dot"></span>publications</a>
+      <a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog' %}class="active"{% endif %}><span class="dot"></span>writing</a>
+      <a href="{{ '/cv/' | relative_url }}" {% if page.url contains '/cv' %}class="active"{% endif %}><span class="dot"></span>cv</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  {{ content }}
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <span class="eyebrow">Noushin Omidvar</span>
+      <p>Applied ML Scientist working across scientific ML, materials, molecules, and engineering.</p>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:noush.omidvar@gmail.com">email</a>
+      <a href="https://github.com/noushin-omidvar">github</a>
+      <a href="https://www.linkedin.com/in/noushin-omidvar">linkedin</a>
+      <a href="https://scholar.google.com/citations?user=TN049LAAAAAJ">scholar</a>
+      <a href="https://twitter.com/NoushinOmidvar">x</a>
+    </div>
+    <div class="copyright">© {{ site.time | date: "%Y" }} Noushin Omidvar</div>
+  </div>
+</footer>
+
+<script src="{{ '/assets/js/portfolio-site.js' | relative_url }}" defer></script>
+</body>
+</html>

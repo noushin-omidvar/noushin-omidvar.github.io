@@ -18,10 +18,16 @@
   --global-footer-link-color: #{$white-color};
   --global-distill-app-color: #{$grey-color};
   --global-divider-color: rgba(0, 0, 0, 0.1);
-  --global-card-bg-color: #{$white-color};
+  --global-card-bg-color: #ffffff;
+  --global-surface-color: #ffffff;
+  --global-soft-surface-color: #f1f3f4;
+  --global-secondary-accent: #{$clay-color};
+  --global-tertiary-accent: #{$aqua-color};
   --global-highlight-color: #{$teal-color};
-  --global-navbar-bg-color: rgba(255, 255, 255, 0.88);
-  --global-teal-tint: rgba(8, 145, 178, 0.05);
+  --global-navbar-bg-color: rgba(252, 252, 250, 0.94);
+  --global-teal-tint: rgba(41, 72, 255, 0.075);
+  --global-clay-tint: rgba(240, 74, 71, 0.06);
+  --global-aqua-tint: rgba(111, 140, 255, 0.08);
   --global-back-to-top-bg-color: rgba(
     #{color.channel($black-color, "red", $space: rgb)},
     #{color.channel($black-color, "green", $space: rgb)},
@@ -82,17 +88,21 @@ html[data-theme="dark"] {
   color-scheme: dark;
   --global-bg-color: #{$grey-color-dark};
   --global-code-bg-color: #{$code-bg-color-dark};
-  --global-text-color: #{$grey-color-light};
-  --global-text-color-light: #{$grey-color};
+  --global-text-color: #f6f8ff;
+  --global-text-color-light: #abb4c8;
   --global-theme-color: #{$teal-color-bright};
   --global-hover-color: #{$teal-color-bright};
   --global-hover-text-color: #{$white-color};
-  --global-footer-bg-color: #{$grey-color-light};
-  --global-footer-text-color: #{$grey-color-dark};
-  --global-footer-link-color: #{$black-color};
+  --global-footer-bg-color: #101827;
+  --global-footer-text-color: #b7bfce;
+  --global-footer-link-color: #ffffff;
   --global-distill-app-color: #{$grey-color-light};
-  --global-divider-color: #424246;
+  --global-divider-color: #2a3448;
   --global-card-bg-color: #{$grey-900};
+  --global-surface-color: #{$grey-900};
+  --global-soft-surface-color: #202124;
+  --global-secondary-accent: #{$clay-color-bright};
+  --global-tertiary-accent: #{$aqua-color-bright};
   --global-back-to-top-bg-color: rgba(
     #{color.channel($white-color, "red", $space: rgb)},
     #{color.channel($white-color, "green", $space: rgb)},
@@ -102,8 +112,10 @@ html[data-theme="dark"] {
   --global-back-to-top-text-color: #{$black-color};
   --global-newsletter-bg-color: #{$grey-color-light};
   --global-newsletter-text-color: #{$grey-color-dark};
-  --global-navbar-bg-color: rgba(28, 28, 29, 0.88);
-  --global-teal-tint: rgba(8, 145, 178, 0.08);
+  --global-navbar-bg-color: rgba(32, 33, 36, 0.96);
+  --global-teal-tint: rgba(129, 146, 255, 0.13);
+  --global-clay-tint: rgba(255, 114, 119, 0.12);
+  --global-aqua-tint: rgba(119, 200, 255, 0.13);
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;

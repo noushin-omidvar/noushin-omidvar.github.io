@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: portfolio_post
 title: Why Data Splitting Matters in Molecular Machine Learning
 date: 2026-03-09 00:00:00+0000
 description: Random Splits, Scaffold Splits, and Cluster Splits Explained

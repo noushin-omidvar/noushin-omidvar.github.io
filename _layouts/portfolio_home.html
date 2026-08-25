@@ -1,0 +1,148 @@
+---
+layout: portfolio_base
+---
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-role">Applied ML Scientist, Aionics Inc.</div>
+      <h1>Noushin<br>Omidvar</h1>
+      <p><strong>Machine learning for the messy part of science</strong> where data is limited, experiments are expensive, and a good prediction still isn't a decision.</p>
+      <p>I build ML systems across <strong>materials, molecules, and engineering</strong>: scientific ML, materials informatics, experimental decision support, and optimization; aimed at one goal, helping scientists learn faster, search smarter, and decide what to test next.</p>
+    </div>
+
+    <div class="hero-photo-wrap">
+      <svg class="graph-decor" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <line x1="40" y1="60" x2="120" y2="30"></line>
+        <line x1="120" y1="30" x2="210" y2="70"></line>
+        <line x1="210" y1="70" x2="270" y2="150"></line>
+        <line x1="40" y1="60" x2="70" y2="150"></line>
+        <line x1="70" y1="150" x2="150" y2="180"></line>
+        <line x1="150" y1="180" x2="270" y2="150"></line>
+        <line x1="150" y1="180" x2="120" y2="260"></line>
+        <line x1="270" y1="150" x2="230" y2="250"></line>
+        <circle cx="40" cy="60" r="5"></circle>
+        <circle cx="120" cy="30" r="4"></circle>
+        <circle cx="210" cy="70" r="6" class="ember"></circle>
+        <circle cx="270" cy="150" r="5"></circle>
+        <circle cx="70" cy="150" r="4"></circle>
+        <circle cx="150" cy="180" r="6" class="ember"></circle>
+        <circle cx="120" cy="260" r="4"></circle>
+        <circle cx="230" cy="250" r="5"></circle>
+      </svg>
+      <img class="hero-photo"
+           src="{{ '/assets/img/noushin-profile.jpg' | relative_url }}"
+           alt="Portrait of Noushin Omidvar"
+           onerror="this.closest('.hero-photo-wrap').classList.add('portrait-missing'); this.remove();">
+    </div>
+  </div>
+</section>
+
+<div class="wrap home-flow">
+  <section class="spine-section reveal" aria-labelledby="areas-title">
+    <div class="node"></div>
+    <div>
+      <div class="section-head">
+        <span class="eyebrow">what i work on</span>
+        <h2 id="areas-title">Four places ML meets the lab bench</h2>
+      </div>
+      <div class="pillars">
+        <article class="pillar">
+          <span class="eyebrow">materials</span>
+          <h3>Materials informatics</h3>
+          <p>Learning structure–property relationships where labeled data is scarce and every additional experiment is costly.</p>
+        </article>
+        <article class="pillar">
+          <span class="eyebrow">molecules</span>
+          <h3>Molecular ML</h3>
+          <p>Graph-based and interpretable models for molecular and materials properties — built to reveal useful scientific structure, not just predict.</p>
+        </article>
+        <article class="pillar">
+          <span class="eyebrow">decisions</span>
+          <h3>Experimental decision support</h3>
+          <p>Turning model output and uncertainty into a recommendation: what to test next, and why the experiment is worth doing.</p>
+        </article>
+        <article class="pillar">
+          <span class="eyebrow">search</span>
+          <h3>Optimization</h3>
+          <p>Constrained and multi-objective search workflows that connect scientific models to practical design decisions.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="spine-section reveal" id="work" aria-labelledby="work-title">
+    <div class="node ember"></div>
+    <div>
+      <div class="section-head">
+        <span class="eyebrow">selected work</span>
+        <h2 id="work-title">A few problems I’ve worked on</h2>
+      </div>
+      <div class="work-list">
+        <article class="work-item">
+          <div class="work-index">01</div>
+          <div>
+            <div class="work-meta">Industry · Battery R&amp;D</div>
+            <h3>Experimental decision support</h3>
+            <p>Built ranking and prioritization workflows across 1,400+ battery experiments to help focus expensive formulation testing on the most informative candidates.</p>
+            <span class="work-note">Private industry case study</span>
+          </div>
+        </article>
+
+        <article class="work-item">
+          <div class="work-index">02</div>
+          <div>
+            <div class="work-meta">Scientific ML · Properties</div>
+            <h3>Molecular property modeling</h3>
+            <p>Developed reusable prediction and validation workflows for scientific-property datasets spanning electrolyte and thermophysical applications.</p>
+            <span class="work-note">Industry systems &amp; modeling</span>
+          </div>
+        </article>
+
+        <article class="work-item">
+          <div class="work-index">03</div>
+          <div>
+            <div class="work-meta">Research · Catalysis</div>
+            <h3>Interpretable ML for catalyst discovery</h3>
+            <p>Connected DFT-derived structure and bonding information to catalytic behavior with interpretable and graph-based machine-learning models.</p>
+            <a class="inline-link" href="{{ '/publications/' | relative_url }}">Selected papers →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="spine-section reveal" aria-labelledby="writing-home-title">
+    <div class="node"></div>
+    <div>
+      <div class="section-head">
+        <span class="eyebrow">latest writing</span>
+        <h2 id="writing-home-title">From the notebook</h2>
+      </div>
+      {% assign latest_post = site.posts | first %}
+      {% if latest_post %}
+      <div class="post-row">
+        <a class="post-title" href="{{ latest_post.url | relative_url }}">{{ latest_post.title }}</a>
+        <span class="post-date">{{ latest_post.date | date: "%b %d, %Y" }}</span>
+      </div>
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="spine-section reveal" aria-labelledby="research-home-title">
+    <div class="node ember"></div>
+    <div>
+      <div class="section-head">
+        <span class="eyebrow">selected research</span>
+        <h2 id="research-home-title">Papers</h2>
+      </div>
+      <div class="home-research-note">
+        <p>Selected work on interpretable scientific ML, graph learning, catalysis, and materials discovery.</p>
+        <a class="inline-link" href="{{ '/publications/' | relative_url }}">View publications →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="personal-note reveal" aria-label="About Noushin">
+    <p>I’m based in the Bay Area and interested in scientific ML systems that connect models, computation, and experiments.</p>
+  </section>
+</div>
