@@ -9,28 +9,7 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-publications",
-          title: "publications",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/publications/";
-          },
-        },{id: "nav-writing",
-          title: "writing",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/blog/";
-          },
-        },{id: "nav-cv",
-          title: "cv",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/cv/";
-          },
-        },{id: "post-why-data-splitting-matters-in-molecular-machine-learning",
+  },{id: "post-why-data-splitting-matters-in-molecular-machine-learning",
         
           title: "Why Data Splitting Matters in Molecular Machine Learning",
         
