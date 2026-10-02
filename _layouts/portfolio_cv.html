@@ -5,7 +5,7 @@ layout: portfolio_base
   <div class="wrap narrow">
     <div class="eyebrow">curriculum vitae</div>
     <h1>Experience &amp; background</h1>
-    <p class="page-deck">Applied machine learning for scientific and engineering R&amp;D, with a background in chemical engineering, materials, and interpretable ML.</p>
+    <p class="page-deck">Scientific machine learning for chemistry, materials, and engineering R&amp;D, with experience spanning molecular representation, predictive modeling, rigorous validation, ranking, optimization, and large-scale screening.</p>
     <a class="text-button" href="{{ '/assets/pdf/ML_Resume_red.pdf' | relative_url }}">Download PDF ↗</a>
   </div>
 </section>
@@ -17,26 +17,30 @@ layout: portfolio_base
       <div class="cv-block-head">Experience</div>
 
       <article class="cv-row">
-        <div class="cv-date">2024—Now</div>
+        <div class="cv-date">2024–Now</div>
         <div class="cv-content">
           <h2>Machine Learning Scientist</h2>
           <div class="cv-org">Aionics, Inc. · Palo Alto, CA</div>
           <ul>
-            <li>Built experimental decision-support and learning-to-rank workflows over battery formulation campaigns.</li>
-            <li>Developed scientific ML systems for molecular and materials property prediction, optimization, and R&amp;D decision making.</li>
-            <li>Built reproducible data/model workflows connecting scientific data, validation, model artifacts, and downstream use.</li>
+            <li>Built learning-to-rank and experimental decision-support workflows across 1,400+ battery experiments, representing electrolyte mixtures from molecular, DFT-derived, and composition-aware features.</li>
+            <li>Developed molecular and mixture-property models for scientific screening, with reusable workflows for feature generation, training, validation, diagnostics, and comparison against strong baselines.</li>
+            <li>Built chemistry-aware benchmarking pipelines using similarity-based splits to evaluate how models generalize to structurally unfamiliar molecules.</li>
+            <li>Combined ML property models with thermodynamic and engineering constraints for large-scale candidate screening and multi-objective decision making.</li>
+            <li>Created reproducible Python workflows connecting raw scientific data, featurization, model artifacts, evaluation, visualization, and downstream engineering use.</li>
           </ul>
         </div>
       </article>
 
       <article class="cv-row">
-        <div class="cv-date">2016—2022</div>
+        <div class="cv-date">2016–2022</div>
         <div class="cv-content">
           <h2>Graduate Research Assistant</h2>
           <div class="cv-org">Virginia Tech · Department of Chemical Engineering</div>
           <ul>
-            <li>Developed interpretable and graph-based ML models linking DFT-derived physical and structural descriptors to catalyst behavior.</li>
-            <li>Built reproducible Python workflows for scientific data cleaning, featurization, modeling, validation, interpretation, and visualization.</li>
+            <li>Developed interpretable and graph-based ML models linking DFT-derived physical, structural, and bonding descriptors to catalyst behavior.</li>
+            <li>Used graph neural networks and explainable ML to identify chemically meaningful structure-property relationships and guide catalyst design.</li>
+            <li>Built reproducible scientific-computing workflows for data curation, featurization, modeling, validation, interpretation, and visualization.</li>
+            <li>Contributed to peer-reviewed work spanning interpretable ML, graph learning, electrocatalysis, and materials discovery.</li>
           </ul>
         </div>
       </article>
@@ -50,7 +54,7 @@ layout: portfolio_base
         <div class="cv-content">
           <h2>PhD, Chemical Engineering</h2>
           <div class="cv-org">Virginia Tech</div>
-          <p>Toward Designing Active ORR Catalysts via Interpretable and Explainable ML.</p>
+          <p>Toward Designing Active ORR Catalysts via Interpretable and Explainable Machine Learning.</p>
         </div>
       </article>
 
@@ -72,11 +76,13 @@ layout: portfolio_base
     </section>
 
     <section class="cv-block">
-      <div class="cv-block-head">Tools &amp; methods</div>
+      <div class="cv-block-head">Methods &amp; tools</div>
       <div class="skill-cloud">
-        <span>Python</span><span>PyTorch</span><span>scikit-learn</span><span>RDKit</span>
-        <span>Graph Neural Networks</span><span>DFT</span><span>Scientific ML</span>
-        <span>Optimization</span><span>Interpretable ML</span><span>SQL</span><span>AWS</span>
+        <span>Python</span><span>PyTorch</span><span>scikit-learn</span><span>XGBoost</span>
+        <span>RDKit</span><span>Graph Neural Networks</span><span>Molecular Descriptors</span>
+        <span>DFT</span><span>Scientific ML</span><span>Learning to Rank</span>
+        <span>Optimization</span><span>Interpretable ML</span><span>Similarity-aware Validation</span>
+        <span>Weights &amp; Biases</span><span>Optuna</span><span>SQL</span><span>AWS</span><span>GCP</span>
       </div>
     </section>
 

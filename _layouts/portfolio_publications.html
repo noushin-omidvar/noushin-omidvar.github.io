@@ -5,14 +5,40 @@ layout: portfolio_base
   <div class="wrap narrow">
     <div class="eyebrow">research</div>
     <h1>Publications</h1>
-    <p class="page-deck">Selected peer-reviewed research across interpretable machine learning, catalysis, materials, and scientific discovery.</p>
+    <p class="page-deck">Peer-reviewed research across interpretable machine learning, graph learning, catalysis, materials, and scientific discovery.</p>
   </div>
 </section>
 
 <section class="page-body publications-page">
   <div class="wrap narrow">
-    <div class="bibliography-shell">
-      {% bibliography %}
-    </div>
+    <section class="publication-highlights" aria-labelledby="selected-publications-title">
+      <div class="cv-block-head">Selected research</div>
+      <h2 id="selected-publications-title" class="subsection-title">Three papers that best represent my scientific ML work</h2>
+      <div class="publication-highlight-grid">
+        <article class="publication-highlight">
+          <div class="publication-kicker">2023 · Nature Communications</div>
+          <h3>Interpretable design of Ir-free trimetallic electrocatalysts for ammonia oxidation with graph neural networks</h3>
+          <p>Graph learning and interpretable analysis for connecting catalyst structure to experimentally relevant design principles.</p>
+        </article>
+        <article class="publication-highlight">
+          <div class="publication-kicker">2021 · J. Phys. Chem. Letters</div>
+          <h3>Interpretable machine learning of chemical bonding at solid surfaces</h3>
+          <p>Interpretable scientific ML using first-principles data to uncover relationships between bonding, structure, and catalytic behavior.</p>
+        </article>
+        <article class="publication-highlight">
+          <div class="publication-kicker">2024 · Electrochemical Science Advances</div>
+          <h3>Explainable AI for optimizing oxygen reduction on Pt monolayer core-shell catalysts</h3>
+          <p>Explainable models for extracting catalyst design insight from complex materials data.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="publication-record" aria-labelledby="publication-record-title">
+      <div class="cv-block-head">Full record</div>
+      <h2 id="publication-record-title" class="subsection-title">Publications &amp; scholarly work</h2>
+      <div class="bibliography-shell">
+        {% bibliography %}
+      </div>
+    </section>
   </div>
 </section>
