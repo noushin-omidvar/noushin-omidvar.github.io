@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" fill="none">
+  <rect width="1200" height="640" rx="28" fill="#FBFBFA"/>
+  <rect x="24" y="24" width="1152" height="592" rx="24" stroke="#DCE3E5" stroke-width="2"/>
+  <text x="70" y="92" fill="#315F74" font-family="Arial, sans-serif" font-size="24" font-weight="700">TASK FRAMING AND EVALUATION</text>
+  <rect x="70" y="140" width="470" height="250" rx="22" fill="#FFFFFF" stroke="#DCE3E5" stroke-width="2"/>
+  <text x="100" y="188" fill="#C73A49" font-family="Arial, sans-serif" font-size="20" font-weight="700">Regression question</text>
+  <text x="100" y="245" fill="#14202B" font-family="Georgia, serif" font-size="34" font-weight="700">What exact lifetime</text>
+  <text x="100" y="288" fill="#14202B" font-family="Georgia, serif" font-size="34" font-weight="700">will this cell achieve?</text>
+  <text x="100" y="344" fill="#546068" font-family="Arial, sans-serif" font-size="23">Useful, but not perfectly aligned with the</text>
+  <text x="100" y="375" fill="#546068" font-family="Arial, sans-serif" font-size="23">decision of which candidates to test first.</text>
+  <rect x="660" y="140" width="470" height="250" rx="22" fill="#FFFFFF" stroke="#DCE3E5" stroke-width="2"/>
+  <text x="690" y="188" fill="#315F74" font-family="Arial, sans-serif" font-size="20" font-weight="700">Ranking question</text>
+  <text x="690" y="245" fill="#14202B" font-family="Georgia, serif" font-size="34" font-weight="700">Which formulations</text>
+  <text x="690" y="288" fill="#14202B" font-family="Georgia, serif" font-size="34" font-weight="700">should we test first?</text>
+  <text x="690" y="344" fill="#546068" font-family="Arial, sans-serif" font-size="23">Better aligned with prioritization and</text>
+  <text x="690" y="375" fill="#546068" font-family="Arial, sans-serif" font-size="23">top-candidate discovery.</text>
+  <rect x="70" y="440" width="1060" height="120" rx="22" fill="#FFFFFF" stroke="#DCE3E5" stroke-width="2"/>
+  <text x="100" y="490" fill="#14202B" font-family="Georgia, serif" font-size="32" font-weight="700">Evaluation focused on both top-K quality and order</text>
+  <text x="100" y="532" fill="#546068" font-family="Arial, sans-serif" font-size="24"><tspan font-weight="700" fill="#315F74">NDCG@10</tspan> asks whether the best candidates rise near the top.</text>
+  <text x="650" y="532" fill="#546068" font-family="Arial, sans-serif" font-size="24"><tspan font-weight="700" fill="#C73A49">Spearman</tspan> asks whether the relative ordering is meaningful.</text>
+</svg>

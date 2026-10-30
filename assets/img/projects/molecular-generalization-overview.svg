@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" fill="none">
+  <rect width="1200" height="700" rx="28" fill="#FBFBFA"/>
+  <rect x="24" y="24" width="1152" height="652" rx="24" stroke="#DCE3E5" stroke-width="2"/>
+  <text x="70" y="100" fill="#315F74" font-family="Arial, sans-serif" font-size="26" font-weight="700">MOLECULAR ML BENCHMARKING</text>
+  <text x="70" y="150" fill="#14202B" font-family="Georgia, serif" font-size="52" font-weight="700">Testing generalization under chemical shift</text>
+  <rect x="70" y="220" width="250" height="150" rx="20" fill="#FFFFFF" stroke="#DCE3E5" stroke-width="2"/>
+  <text x="102" y="272" fill="#14202B" font-family="Georgia, serif" font-size="34" font-weight="700">Molecules</text>
+  <text x="100" y="320" fill="#546068" font-family="Arial, sans-serif" font-size="24">dataset</text>
+  <path d="M320 295H390" stroke="#315F74" stroke-width="4" stroke-linecap="round"/>
+  <path d="M380 285L400 295L380 305" stroke="#315F74" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="410" y="220" width="290" height="150" rx="20" fill="#FFFFFF" stroke="#DCE3E5" stroke-width="2"/>
+  <text x="438" y="272" fill="#14202B" font-family="Georgia, serif" font-size="34" font-weight="700">Similarity graph</text>
+  <circle cx="520" cy="316" r="8" fill="#C73A49"/><circle cx="560" cy="286" r="8" fill="#315F74"/><circle cx="602" cy="326" r="8" fill="#315F74"/><circle cx="642" cy="294" r="8" fill="#C73A49"/>
+  <path d="M528 313L554 289L596 323L636 298" stroke="#A6BDC7" stroke-width="3"/>
+  <path d="M700 295H770" stroke="#315F74" stroke-width="4" stroke-linecap="round"/>
+  <path d="M760 285L780 295L760 305" stroke="#315F74" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="790" y="220" width="300" height="150" rx="20" fill="#FFFFFF" stroke="#DCE3E5" stroke-width="2"/>
+  <text x="820" y="272" fill="#14202B" font-family="Georgia, serif" font-size="32" font-weight="700">Chemistry-aware</text>
+  <text x="820" y="313" fill="#14202B" font-family="Georgia, serif" font-size="32" font-weight="700">split policy</text>
+  <text x="820" y="347" fill="#546068" font-family="Arial, sans-serif" font-size="22">similarity components</text>
+  <rect x="110" y="450" width="980" height="140" rx="24" fill="#FFFFFF" stroke="#DCE3E5" stroke-width="2"/>
+  <text x="140" y="500" fill="#14202B" font-family="Georgia, serif" font-size="34" font-weight="700">Benchmark comparison</text>
+  <text x="140" y="545" fill="#315F74" font-family="Arial, sans-serif" font-size="24" font-weight="700">2D descriptors + XGBoost</text>
+  <text x="690" y="545" fill="#C73A49" font-family="Arial, sans-serif" font-size="24" font-weight="700">Pretrained embeddings baseline</text>
+  <rect x="140" y="560" width="360" height="18" rx="9" fill="#315F74"/>
+  <rect x="690" y="560" width="220" height="18" rx="9" fill="#C73A49"/>
+</svg>
