@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" fill="none">
+  <rect width="1200" height="640" rx="28" fill="#FBFBFA"/>
+  <rect x="24" y="24" width="1152" height="592" rx="24" stroke="#DCE3E5" stroke-width="2"/>
+  <text x="70" y="92" fill="#315F74" font-family="Arial, sans-serif" font-size="24" font-weight="700">CRITICAL-TEMPERATURE BENCHMARK</text>
+  <text x="70" y="145" fill="#14202B" font-family="Georgia, serif" font-size="48" font-weight="700">A classical baseline remained strongest</text>
+  <line x1="170" y1="500" x2="1020" y2="500" stroke="#C9D3D7" stroke-width="2"/>
+  <line x1="170" y1="220" x2="170" y2="500" stroke="#C9D3D7" stroke-width="2"/>
+  <text x="100" y="515" fill="#546068" font-family="Arial, sans-serif" font-size="22">0</text>
+  <text x="100" y="395" fill="#546068" font-family="Arial, sans-serif" font-size="22">25</text>
+  <text x="100" y="275" fill="#546068" font-family="Arial, sans-serif" font-size="22">50</text>
+  <text x="100" y="230" fill="#546068" font-family="Arial, sans-serif" font-size="22">MAE (K)</text>
+  <rect x="300" y="378" width="170" height="122" rx="18" fill="#315F74"/>
+  <text x="260" y="548" fill="#14202B" font-family="Georgia, serif" font-size="28" font-weight="700">2D + XGBoost</text>
+  <text x="335" y="440" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="36" font-weight="700">25.3</text>
+  <rect x="660" y="265" width="170" height="235" rx="18" fill="#C73A49"/>
+  <text x="610" y="548" fill="#14202B" font-family="Georgia, serif" font-size="28" font-weight="700">Embeddings + Ridge</text>
+  <text x="693" y="393" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="36" font-weight="700">48.9</text>
+  <text x="860" y="330" fill="#546068" font-family="Arial, sans-serif" font-size="24">Under the chosen similarity-aware</text>
+  <text x="860" y="362" fill="#546068" font-family="Arial, sans-serif" font-size="24">split, the simpler descriptor baseline</text>
+  <text x="860" y="394" fill="#546068" font-family="Arial, sans-serif" font-size="24">generalized better.</text>
+</svg>

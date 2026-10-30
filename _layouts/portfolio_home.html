@@ -10,6 +10,7 @@ layout: portfolio_base
       <p>I build scientific ML systems that connect <strong>chemical representation, predictive modeling, rigorous validation, and optimization</strong> to help scientists decide what to test next, and then <strong>learn from what the lab finds</strong>.</p>
       <div class="hero-actions" aria-label="Primary links">
         <a class="primary-action" href="#work">Selected work ↓</a>
+        <a class="secondary-action" href="{{ '/projects/' | relative_url }}">Projects</a>
         <a class="secondary-action" href="{{ '/cv/' | relative_url }}">CV</a>
         <a class="secondary-action" href="{{ '/publications/' | relative_url }}">Publications</a>
       </div>
@@ -83,6 +84,7 @@ layout: portfolio_base
           <p>Turn experimental results into revised constraints, model-reliability flags, and the next round of candidates.</p>
         </article>
       </div>
+      <a class="text-button" href="{{ '/projects/' | relative_url }}">View all project case studies</a>
     </div>
   </section>
 
@@ -98,89 +100,118 @@ layout: portfolio_base
       <div class="work-list">
         <article class="work-item featured-work">
           <div class="work-index">01</div>
-          <div>
-            <div class="work-meta">Industry · Battery R&amp;D · Lab-in-the-loop</div>
-            <h3>Closed-loop design of battery electrolytes</h3>
-            <p>Connected a mixture-aware property model with constrained multi-objective optimization to propose electrolyte formulations that balance ionic conductivity, viscosity, and flash point, then shortlisted diverse candidates from across the Pareto front for laboratory testing.</p>
-            <div class="loop-strip" aria-label="Closed-loop workflow">
-              <span>Predict</span><i aria-hidden="true">→</i><span>Optimize</span><i aria-hidden="true">→</i><span>Test in the lab</span><i aria-hidden="true">→</i><span class="loop-feedback">Refine ↺</span>
+          <div class="work-content">
+            <img class="work-figure" src="{{ '/assets/img/projects/closed-loop-overview.png' | relative_url }}" alt="Closed loop: predict properties, optimize, test in the lab, and refine constraints from lab feedback">
+            <div>
+              <div class="work-meta">Industry · Battery R&amp;D · Lab-in-the-loop</div>
+              <h3>Closed-loop design of battery electrolytes</h3>
+              <p>Connected a mixture-aware property model with constrained multi-objective optimization to propose electrolyte formulations that balance ionic conductivity, viscosity, and flash point, then shortlisted diverse candidates from across the Pareto front for laboratory testing.</p>
+              <div class="loop-strip" aria-label="Closed-loop workflow">
+                <span>Predict</span><i aria-hidden="true">→</i><span>Optimize</span><i aria-hidden="true">→</i><span>Test in the lab</span><i aria-hidden="true">→</i><span class="loop-feedback">Refine ↺</span>
+              </div>
+              <p>The lab then reshaped the problem. When some formulations would not mix during preparation, I located the failing composition region and revised the optimizer's composition bounds. When measurements showed a systematic viscosity overprediction in concentrated electrolytes, we flagged that regime as unreliable for optimization and targeted it for new training data.</p>
+              <div class="evidence-row" aria-label="Project highlights">
+                <span>mixture-aware GNN surrogate</span>
+                <span>NSGA-III Pareto search</span>
+                <span>lab-informed constraints</span>
+                <span>model-reliability checks</span>
+              </div>
+              <div class="work-actions">
+                <span class="work-note">Public-facing summary of private industry work · surrogate: DiffMix (Zhu et al., Nat. Commun. 2024)</span>
+              </div>
             </div>
-            <p>The lab then reshaped the problem. When some formulations would not mix during preparation, I located the failing composition region and revised the optimizer's composition bounds. When measurements showed a systematic viscosity overprediction in concentrated electrolytes, we flagged that regime as unreliable for optimization and targeted it for new training data.</p>
-            <div class="evidence-row" aria-label="Project highlights">
-              <span>mixture-aware GNN surrogate</span>
-              <span>NSGA-III Pareto search</span>
-              <span>lab-informed constraints</span>
-              <span>model-reliability checks</span>
-            </div>
-            <span class="work-note">Private industry case study · public-facing summary · surrogate architecture: DiffMix (Zhu et al., Nat. Commun. 2024)</span>
           </div>
         </article>
 
         <article class="work-item">
           <div class="work-index">02</div>
-          <div>
-            <div class="work-meta">Industry · Battery R&amp;D · Experiment prioritization</div>
-            <h3>Learning to rank electrolyte formulations by cycle life</h3>
-            <p>Cycling tests are slow and lab capacity is limited, so the real question was which formulation to test next. Across 1,400+ cycling experiments, I described each formulation with structural, molecular-DFT, and surface-DFT descriptors aggregated by composition, kept only features that were stable across folds, and trained a listwise ranker within comparable cycling protocols.</p>
-            <p>To avoid optimistic estimates, evaluation used nested grouped cross-validation that held out entire component combinations, with all feature selection and tuning inside the training folds.</p>
-            <div class="evidence-row" aria-label="Project highlights">
-              <span>1,400+ experiments</span>
-              <span>mixture representations</span>
-              <span>XGBoost listwise ranking</span>
-              <span>nested grouped CV</span>
-              <span>NDCG@10 + Spearman</span>
+          <div class="work-content">
+            <img class="work-figure" src="{{ '/assets/img/projects/electrolyte-overview.svg' | relative_url }}" alt="Workflow from molecules to descriptors, mixture representation, ranking model, and prioritized formulations">
+            <div>
+              <div class="work-meta">Industry · Battery R&amp;D · Experiment prioritization</div>
+              <h3>Learning to rank electrolyte formulations by cycle life</h3>
+              <p>Cycling tests are slow and lab capacity is limited, so the real question was which formulation to test next. Across 1,400+ cycling experiments, I described each formulation with structural, molecular-DFT, and surface-DFT descriptors aggregated by composition, kept only features that were stable across folds, and trained a listwise ranker within comparable cycling protocols.</p>
+              <p>To avoid optimistic estimates, evaluation used nested grouped cross-validation that held out entire component combinations, with all feature selection and tuning inside the training folds.</p>
+              <div class="evidence-row" aria-label="Project highlights">
+                <span>1,400+ experiments</span>
+                <span>mixture representations</span>
+                <span>XGBoost listwise ranking</span>
+                <span>nested grouped CV</span>
+                <span>NDCG@10 + Spearman</span>
+              </div>
+              <div class="work-actions">
+                <a class="inline-link" href="{{ '/projects/electrolyte-ranking/' | relative_url }}">View case study →</a>
+                <span class="work-note">Public-facing summary of private industry work</span>
+              </div>
             </div>
-            <span class="work-note">Private industry case study · public-facing summary</span>
           </div>
         </article>
 
         <article class="work-item">
           <div class="work-index">03</div>
-          <div>
-            <div class="work-meta">Research · Catalysis · Active learning</div>
-            <h3>Physics-informed graph learning for catalyst discovery</h3>
-            <p>Used a theory-infused graph neural network that predicts physically meaningful d-band and adsorbate-orbital parameters and computes adsorption energy through a differentiable Newns–Anderson chemisorption model, so the physics sits inside the forward pass and the learned quantities can be inspected.</p>
-            <p>Wrapped the model in an active-learning loop with DFT, where each round selected the next calculations, then screened about 17,700 candidate surfaces down to 155 for DFT validation.</p>
-            <div class="evidence-row" aria-label="Project highlights">
-              <span>DFT</span>
-              <span>physics-informed GNN</span>
-              <span>Newns–Anderson theory</span>
-              <span>active learning</span>
-              <span>interpretable ML</span>
+          <div class="work-content">
+            <img class="work-figure" src="{{ '/assets/img/projects/Explainable AI for ORR Catalysts.png' | relative_url }}" alt="Workflow from atomic structure and DFT to graph neural network and chemical insight">
+            <div>
+              <div class="work-meta">Research · Catalysis · Active learning</div>
+              <h3>Physics-informed graph learning for catalyst discovery</h3>
+              <p>Used a theory-infused graph neural network that predicts physically meaningful d-band and adsorbate-orbital parameters and computes adsorption energy through a differentiable Newns–Anderson chemisorption model, so the physics sits inside the forward pass and the learned quantities can be inspected.</p>
+              <p>Wrapped the model in an active-learning loop with DFT, where each round selected the next calculations, then screened about 17,700 candidate surfaces down to 155 for DFT validation.</p>
+              <div class="evidence-row" aria-label="Project highlights">
+                <span>DFT</span>
+                <span>physics-informed GNN</span>
+                <span>Newns–Anderson theory</span>
+                <span>active learning</span>
+                <span>interpretable ML</span>
+              </div>
+              <div class="work-actions">
+                <a class="inline-link" href="{{ '/projects/catalyst-discovery/' | relative_url }}">View case study →</a>
+                <a class="inline-link" href="{{ '/publications/' | relative_url }}">Selected papers →</a>
+              </div>
             </div>
-            <a class="inline-link" href="{{ '/publications/' | relative_url }}">Selected papers →</a>
           </div>
         </article>
 
         <article class="work-item">
           <div class="work-index">04</div>
-          <div>
-            <div class="work-meta">Scientific Screening · Thermodynamics</div>
-            <h3>Physics-constrained screening across chemical space</h3>
-            <p>Predicted critical temperature, critical pressure, and acentric factor from molecular descriptors, then fed them into Peng–Robinson equation-of-state and power-cycle calculations with engineering constraints. Cheap ML ran on everything; expensive physics ran only on the survivors, taking hundreds of millions of candidate molecules down to a small engineering review set.</p>
-            <div class="evidence-row" aria-label="Project highlights">
-              <span>large-scale screening</span>
-              <span>similarity-aware validation</span>
-              <span>equation of state</span>
-              <span>physics constraints</span>
+          <div class="work-content">
+            <img class="work-figure" src="{{ '/assets/img/projects/orc-screening-overview.svg' | relative_url }}" alt="Funnel from hundreds of millions of candidate molecules to a small engineering review set">
+            <div>
+              <div class="work-meta">Scientific Screening · Thermodynamics</div>
+              <h3>Physics-constrained screening across chemical space</h3>
+              <p>Predicted critical temperature, critical pressure, and acentric factor from molecular descriptors, then fed them into Peng–Robinson equation-of-state and power-cycle calculations with engineering constraints. Cheap ML ran on everything; expensive physics ran only on the survivors, taking hundreds of millions of candidate molecules down to a small engineering review set.</p>
+              <div class="evidence-row" aria-label="Project highlights">
+                <span>large-scale screening</span>
+                <span>similarity-aware validation</span>
+                <span>equation of state</span>
+                <span>physics constraints</span>
+              </div>
+              <div class="work-actions">
+                <a class="inline-link" href="{{ '/projects/orc-screening/' | relative_url }}">View case study →</a>
+                <span class="work-note">Sanitized public-facing description</span>
+              </div>
             </div>
-            <span class="work-note">Private industry case study · sanitized description</span>
           </div>
         </article>
 
         <article class="work-item">
           <div class="work-index">05</div>
-          <div>
-            <div class="work-meta">Molecular ML · Generalization</div>
-            <h3>Testing whether molecular models actually generalize</h3>
-            <p>Built reproducible molecular-property benchmarks with chemistry-aware similarity splits and compared descriptor-based models against pretrained molecular representations. In a critical-temperature benchmark, the classical descriptor baseline remained the stronger model under the chosen generalization test.</p>
-            <div class="evidence-row" aria-label="Project highlights">
-              <span>similarity-aware CV</span>
-              <span>RDKit / 2D descriptors</span>
-              <span>pretrained embeddings</span>
-              <span>XGBoost</span>
+          <div class="work-content">
+            <img class="work-figure" src="{{ '/assets/img/projects/molecular-generalization-overview.svg' | relative_url }}" alt="Workflow showing molecular dataset, similarity graph, chemistry-aware splits, and benchmark comparison">
+            <div>
+              <div class="work-meta">Molecular ML · Generalization</div>
+              <h3>Testing whether molecular models actually generalize</h3>
+              <p>Built reproducible molecular-property benchmarks with chemistry-aware similarity splits and compared descriptor-based models against pretrained molecular representations. In a critical-temperature benchmark, the classical descriptor baseline remained the stronger model under the chosen generalization test.</p>
+              <div class="evidence-row" aria-label="Project highlights">
+                <span>similarity-aware CV</span>
+                <span>RDKit / 2D descriptors</span>
+                <span>pretrained embeddings</span>
+                <span>XGBoost</span>
+              </div>
+              <div class="work-actions">
+                <a class="inline-link" href="{{ '/projects/molecular-generalization/' | relative_url }}">View case study →</a>
+                <a class="inline-link" href="{{ '/blog/2026/data-splitting-molecular-ml/' | relative_url }}">Related note →</a>
+              </div>
             </div>
-            <a class="inline-link" href="{{ '/blog/2026/data-splitting-molecular-ml/' | relative_url }}">Related note on molecular data splitting →</a>
           </div>
         </article>
       </div>

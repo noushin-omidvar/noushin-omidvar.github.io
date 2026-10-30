@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" fill="none">
+  <rect width="1200" height="700" rx="28" fill="#FBFBFA"/>
+  <rect x="24" y="24" width="1152" height="652" rx="24" stroke="#DCE3E5" stroke-width="2"/>
+  <text x="70" y="100" fill="#315F74" font-family="Arial, sans-serif" font-size="26" font-weight="700">LARGE-SCALE SCIENTIFIC SCREENING</text>
+  <text x="70" y="152" fill="#14202B" font-family="Georgia, serif" font-size="50" font-weight="700">A funnel from chemical space to engineering candidates</text>
+  <polygon points="130,240 1070,240 920,580 280,580" fill="#FFFFFF" stroke="#DCE3E5" stroke-width="2"/>
+  <line x1="220" y1="330" x2="980" y2="330" stroke="#DCE3E5" stroke-width="2"/>
+  <line x1="260" y1="415" x2="940" y2="415" stroke="#DCE3E5" stroke-width="2"/>
+  <line x1="300" y1="500" x2="900" y2="500" stroke="#DCE3E5" stroke-width="2"/>
+  <text x="460" y="292" fill="#14202B" font-family="Georgia, serif" font-size="42" font-weight="700">~800M candidates</text>
+  <text x="505" y="380" fill="#315F74" font-family="Georgia, serif" font-size="34" font-weight="700">ML property prediction</text>
+  <text x="520" y="463" fill="#C73A49" font-family="Georgia, serif" font-size="34" font-weight="700">Equation-of-state + constraints</text>
+  <text x="560" y="548" fill="#14202B" font-family="Georgia, serif" font-size="40" font-weight="700">19 candidates</text>
+</svg>

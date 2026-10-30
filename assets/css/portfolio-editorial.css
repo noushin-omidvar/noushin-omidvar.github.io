@@ -131,3 +131,25 @@ body::before{content:'';position:fixed;left:0;top:0;bottom:0;width:6px;backgroun
   .featured-work{padding:24px 18px}
   .personal-note{margin-left:0}
 }
+
+/* project figures, project cards and case-study pages in the same style */
+.work-figure,.project-card,.project-card-figure,.project-figure-block img{border-radius:0 !important}
+.work-figure{border:0;background:#fff;padding:10px}
+.featured-work .work-figure{background:#fff}
+.work-item:not(.featured-work) .work-figure{background:var(--tint)}
+.project-card{background:var(--tint);border:0}
+.project-card-figure{border-bottom:0;background:#fff}
+.project-card-meta{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--cobalt)}
+.project-card h2{font-size:22px}
+.project-card h2 a:hover{color:var(--cobalt)}
+.project-card p{font-size:15.5px}
+.project-card-body,.project-card-meta,.project-card h2,.case-study-shell .lead,.stat-number,.stat-label,
+.case-study-note,.figure-caption{font-family:Arial, Helvetica, sans-serif !important}
+.case-study-shell .lead{font-size:20px;color:var(--ink)}
+.case-study-shell h2{font-size:28px}
+.case-study-shell p,.case-study-shell li{font-size:17px;color:var(--ink)}
+.project-figure-block img{border:0;background:var(--tint);padding:12px}
+.stats-grid > div{border-top:0;background:var(--tint);padding:14px 16px}
+.stat-number{font-size:30px;font-weight:700;color:var(--cobalt)}
+.stat-label{font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--graphite)}
+.case-study-note{font-size:11px !important;font-weight:700;letter-spacing:.08em}

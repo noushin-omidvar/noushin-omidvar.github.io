@@ -17,7 +17,7 @@
     <a class="monogram" href="{{ '/' | relative_url }}" aria-label="Noushin Omidvar home">N.O.</a>
     <nav class="links" aria-label="Primary">
       <a href="{{ '/' | relative_url }}" {% if page.url == "/" %}class="active"{% endif %}><span class="dot"></span>about</a>
-      <a href="{{ '/' | relative_url }}#work"><span class="dot"></span>work</a>
+      <a href="{{ '/projects/' | relative_url }}" {% if page.url contains '/projects/' %}class="active"{% endif %}><span class="dot"></span>projects</a>
       <a href="{{ '/publications/' | relative_url }}" {% if page.url contains '/publications' %}class="active"{% endif %}><span class="dot"></span>publications</a>
       <a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog' %}class="active"{% endif %}><span class="dot"></span>writing</a>
       <a href="{{ '/cv/' | relative_url }}" {% if page.url contains '/cv' %}class="active"{% endif %}><span class="dot"></span>cv</a>
