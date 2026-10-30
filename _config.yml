@@ -9,7 +9,7 @@ last_name: Omidvar
 contact_note: >
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Scientific machine learning scientist working across molecular and materials AI, chemistry-aware modeling,
-  rigorous validation, experimental decision support, and optimization for scientific and engineering R&D.
+  rigorous validation, optimization, and closed-loop experimental decision support for scientific and engineering R&D.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.

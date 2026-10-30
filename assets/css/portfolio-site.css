@@ -830,7 +830,7 @@ body{background:#FFFFFF}
 }
 .science-flow{
   display:grid;
-  grid-template-columns:minmax(0,1fr) 28px minmax(0,1fr) 28px minmax(0,1fr) 28px minmax(0,1fr);
+  grid-template-columns:minmax(0,1fr) 24px minmax(0,1fr) 24px minmax(0,1fr) 24px minmax(0,1fr) 24px minmax(0,1fr);
   align-items:stretch;
   gap:10px;
 }
@@ -959,3 +959,12 @@ body{background:#FFFFFF}
   .evidence-row span{font-size:10px}
   .subsection-title{font-size:29px}
 }
+
+/* closed-loop additions */
+.flow-step.flow-feedback{border-top-color:var(--ember)}
+.flow-step.flow-feedback h3{color:var(--ember)}
+.loop-strip{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:14px 0 16px}
+.loop-strip span{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;padding:6px 10px;border:1px solid var(--ink);border-radius:2px;color:var(--ink);background:#fff}
+.loop-strip span.loop-feedback{border-color:var(--ember);color:var(--ember)}
+.loop-strip i{font-style:normal;color:var(--line-strong);font-family:'Fraunces',serif;font-size:18px}
+.work-item p + p{margin-top:10px}
