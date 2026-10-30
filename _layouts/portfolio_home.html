@@ -58,14 +58,42 @@ layout: portfolio_base
     <div class="section-head">
       <span class="eyebrow">how i work</span>
       <h2 id="approach-title">From chemistry to decisions</h2>
+      <p class="section-deck">
+        The thread across my work is not a particular model architecture. It is building an end-to-end path from scientific data to a defensible
+        experimental or engineering decision, and letting the experiment change what the model does next.
+      </p>
     </div>
-    <ol class="flow-line" aria-label="Scientific machine learning workflow">
-      <li><b>Represent</b><span>descriptors, graphs, DFT and mixture features</span></li>
-      <li><b>Learn</b><span>ranking, graph ML, strong classical baselines</span></li>
-      <li><b>Validate</b><span>similarity-aware splits, task-aligned metrics</span></li>
-      <li><b>Decide</b><span>ranking, constrained and multi-objective search</span></li>
-      <li class="flow-line-feedback"><b>Learn from the lab</b><span>revised constraints, reliability flags</span></li>
-    </ol>
+    <div class="science-flow" aria-label="Scientific machine learning workflow">
+      <article class="flow-step">
+        <span class="flow-number">01</span>
+        <h3>Represent</h3>
+        <p>Molecular descriptors, graph representations, DFT-derived features, embeddings, and mixture-level statistics.</p>
+      </article>
+      <div class="flow-arrow" aria-hidden="true">→</div>
+      <article class="flow-step">
+        <span class="flow-number">02</span>
+        <h3>Learn</h3>
+        <p>Regression, learning-to-rank, graph ML, interpretable models, and strong classical baselines.</p>
+      </article>
+      <div class="flow-arrow" aria-hidden="true">→</div>
+      <article class="flow-step">
+        <span class="flow-number">03</span>
+        <h3>Validate</h3>
+        <p>Similarity-aware splits, task-aligned metrics, diagnostics, and checks against realistic distribution shift.</p>
+      </article>
+      <div class="flow-arrow" aria-hidden="true">→</div>
+      <article class="flow-step">
+        <span class="flow-number">04</span>
+        <h3>Decide</h3>
+        <p>Candidate ranking, constrained screening, multi-objective optimization, and experiment prioritization.</p>
+      </article>
+      <div class="flow-arrow" aria-hidden="true">→</div>
+      <article class="flow-step flow-feedback">
+        <span class="flow-number">05</span>
+        <h3>Learn from the lab</h3>
+        <p>Turn experimental results into revised constraints, model-reliability flags, and the next round of candidates.</p>
+      </article>
+    </div>
   </section>
 
   <section class="home-section" id="work" aria-labelledby="work-title">
