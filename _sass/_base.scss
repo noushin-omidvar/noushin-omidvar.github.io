@@ -9,7 +9,13 @@ html {
 }
 
 body {
-  font-family: "Google Sans Flex", "Google Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    "Google Sans Flex",
+    "Google Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   font-size: 1rem;
   line-height: 1.7;
   letter-spacing: -0.005em;
@@ -38,7 +44,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Google Sans Flex", "Google Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    "Google Sans Flex",
+    "Google Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   font-weight: 650;
   letter-spacing: -0.025em;
 }
@@ -283,7 +295,9 @@ ul.task-list input[type="checkbox"] {
   border: 1px solid var(--global-divider-color);
   border-radius: 0.45rem;
   box-shadow: none;
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
 
   &:hover {
     border-color: var(--global-theme-color);
@@ -433,7 +447,7 @@ ul.task-list input[type="checkbox"] {
     position: relative;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0.5rem;
@@ -963,7 +977,9 @@ footer.sticky-bottom {
         font-size: 0.75rem;
         color: var(--global-text-color-light);
         text-decoration: none;
-        transition: border-color 0.15s ease, color 0.15s ease;
+        transition:
+          border-color 0.15s ease,
+          color 0.15s ease;
 
         &:hover {
           border-color: var(--global-theme-color);
@@ -1875,9 +1891,7 @@ figure.cover {
   margin: 0 calc(50% - 50vw);
   padding: clamp(4.5rem, 8vw, 7.5rem) max(1.5rem, calc((100vw - 1080px) / 2));
   overflow: hidden;
-  background:
-    radial-gradient(circle at 77% 28%, var(--global-teal-tint) 0, transparent 31rem),
-    var(--global-bg-color);
+  background: radial-gradient(circle at 77% 28%, var(--global-teal-tint) 0, transparent 31rem), var(--global-bg-color);
 
   &::after {
     content: "";
@@ -1888,8 +1902,7 @@ figure.cover {
     height: 22rem;
     pointer-events: none;
     opacity: 0.32;
-    background-image:
-      radial-gradient(circle, var(--global-divider-color) 1px, transparent 1px);
+    background-image: radial-gradient(circle, var(--global-divider-color) 1px, transparent 1px);
     background-size: 24px 24px;
     mask-image: radial-gradient(circle, #000 18%, transparent 72%);
     -webkit-mask-image: radial-gradient(circle, #000 18%, transparent 72%);
@@ -1981,7 +1994,11 @@ figure.cover {
     font-size: 0.88rem;
     font-weight: 650;
     letter-spacing: 0;
-    transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+    transition:
+      transform 160ms ease,
+      background-color 160ms ease,
+      border-color 160ms ease,
+      color 160ms ease;
 
     &:hover {
       transform: translateY(-1px);
@@ -2368,7 +2385,9 @@ figure.cover {
 
 .work-card {
   padding-top: 1.45rem;
-  transition: background-color 160ms ease, transform 160ms ease;
+  transition:
+    background-color 160ms ease,
+    transform 160ms ease;
 
   &:hover {
     transform: translateY(-1px);
@@ -2700,10 +2719,8 @@ footer.sticky-bottom {
 // -----------------------------------------------------------------------------
 
 .about-page .about-hero-shell {
-  background:
-    radial-gradient(circle at 80% 23%, rgba(91, 99, 246, 0.12) 0, rgba(91, 99, 246, 0.045) 18rem, transparent 32rem),
-    radial-gradient(circle at 18% 88%, rgba(242, 112, 89, 0.07) 0, transparent 24rem),
-    var(--global-bg-color);
+  background: radial-gradient(circle at 80% 23%, rgba(91, 99, 246, 0.12) 0, rgba(91, 99, 246, 0.045) 18rem, transparent 32rem),
+    radial-gradient(circle at 18% 88%, rgba(242, 112, 89, 0.07) 0, transparent 24rem), var(--global-bg-color);
 
   &::after {
     background-image: radial-gradient(circle, rgba(91, 99, 246, 0.18) 1px, transparent 1px);
@@ -2777,9 +2794,7 @@ footer.sticky-bottom {
 }
 
 .writing-section {
-  background:
-    radial-gradient(circle at 84% 18%, rgba(91, 99, 246, 0.075), transparent 22rem),
-    var(--global-soft-surface-color);
+  background: radial-gradient(circle at 84% 18%, rgba(91, 99, 246, 0.075), transparent 22rem), var(--global-soft-surface-color);
 }
 
 .research-section .publications ol.bibliography li {
@@ -2797,7 +2812,9 @@ footer.sticky-bottom {
 }
 
 .home-social .contact-icons a {
-  transition: color 160ms ease, transform 160ms ease;
+  transition:
+    color 160ms ease,
+    transform 160ms ease;
 
   &:hover {
     color: var(--global-theme-color);
@@ -2820,16 +2837,12 @@ footer.sticky-bottom {
 
 html[data-theme="dark"] {
   .about-page .about-hero-shell {
-    background:
-      radial-gradient(circle at 80% 23%, rgba(139, 145, 255, 0.15) 0, rgba(139, 145, 255, 0.05) 18rem, transparent 32rem),
-      radial-gradient(circle at 18% 88%, rgba(255, 138, 114, 0.08) 0, transparent 24rem),
-      var(--global-bg-color);
+    background: radial-gradient(circle at 80% 23%, rgba(139, 145, 255, 0.15) 0, rgba(139, 145, 255, 0.05) 18rem, transparent 32rem),
+      radial-gradient(circle at 18% 88%, rgba(255, 138, 114, 0.08) 0, transparent 24rem), var(--global-bg-color);
   }
 
   .writing-section {
-    background:
-      radial-gradient(circle at 84% 18%, rgba(139, 145, 255, 0.09), transparent 22rem),
-      var(--global-soft-surface-color);
+    background: radial-gradient(circle at 84% 18%, rgba(139, 145, 255, 0.09), transparent 22rem), var(--global-soft-surface-color);
   }
 
   footer.fixed-bottom,
@@ -2850,10 +2863,8 @@ html[data-theme="dark"] {
 .about-page .about-hero-shell {
   position: relative;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 82% 28%, rgba(79, 183, 255, 0.24) 0, rgba(79, 183, 255, 0.11) 18rem, transparent 34rem),
-    radial-gradient(circle at 17% 92%, rgba(255, 65, 72, 0.075) 0, transparent 22rem),
-    var(--global-bg-color);
+  background: radial-gradient(circle at 82% 28%, rgba(79, 183, 255, 0.24) 0, rgba(79, 183, 255, 0.11) 18rem, transparent 34rem),
+    radial-gradient(circle at 17% 92%, rgba(255, 65, 72, 0.075) 0, transparent 22rem), var(--global-bg-color);
   border-bottom: 4px solid var(--global-theme-color);
 
   &::before {
@@ -2963,9 +2974,15 @@ html[data-theme="dark"] {
 .impact-item {
   position: relative;
 
-  &:nth-child(1) .impact-value { color: var(--global-theme-color); }
-  &:nth-child(2) .impact-value { color: var(--global-secondary-accent); }
-  &:nth-child(3) .impact-value { color: #1676c7; }
+  &:nth-child(1) .impact-value {
+    color: var(--global-theme-color);
+  }
+  &:nth-child(2) .impact-value {
+    color: var(--global-secondary-accent);
+  }
+  &:nth-child(3) .impact-value {
+    color: #1676c7;
+  }
 
   &::before {
     content: "";
@@ -2978,9 +2995,15 @@ html[data-theme="dark"] {
     opacity: 0.75;
   }
 
-  &:nth-child(1)::before { background: var(--global-theme-color); }
-  &:nth-child(2)::before { background: var(--global-secondary-accent); }
-  &:nth-child(3)::before { background: var(--global-tertiary-accent); }
+  &:nth-child(1)::before {
+    background: var(--global-theme-color);
+  }
+  &:nth-child(2)::before {
+    background: var(--global-secondary-accent);
+  }
+  &:nth-child(3)::before {
+    background: var(--global-tertiary-accent);
+  }
 }
 
 .work-section {
@@ -2993,40 +3016,54 @@ html[data-theme="dark"] {
 }
 
 .work-card {
-  transition: background-color 160ms ease, transform 160ms ease;
+  transition:
+    background-color 160ms ease,
+    transform 160ms ease;
 
   &:nth-child(1) {
     .work-index,
     .work-meta,
-    .work-link { color: var(--global-theme-color); }
+    .work-link {
+      color: var(--global-theme-color);
+    }
 
-    &:hover { background: rgba(35, 59, 255, 0.055); }
+    &:hover {
+      background: rgba(35, 59, 255, 0.055);
+    }
   }
 
   &:nth-child(2) {
     .work-index,
     .work-meta,
-    .work-link { color: var(--global-secondary-accent); }
+    .work-link {
+      color: var(--global-secondary-accent);
+    }
 
-    &:hover { background: rgba(255, 65, 72, 0.055); }
+    &:hover {
+      background: rgba(255, 65, 72, 0.055);
+    }
   }
 
   &:nth-child(3) {
     .work-index,
     .work-meta,
-    .work-link { color: #1676c7; }
+    .work-link {
+      color: #1676c7;
+    }
 
-    &:hover { background: rgba(79, 183, 255, 0.085); }
+    &:hover {
+      background: rgba(79, 183, 255, 0.085);
+    }
   }
 
-  &:hover { transform: translateY(-2px); }
+  &:hover {
+    transform: translateY(-2px);
+  }
 }
 
 .writing-section {
   position: relative;
-  background:
-    linear-gradient(104deg, rgba(79, 183, 255, 0.18), rgba(234, 243, 255, 0.92) 45%, rgba(255, 255, 255, 0.55)),
-    #eaf3ff;
+  background: linear-gradient(104deg, rgba(79, 183, 255, 0.18), rgba(234, 243, 255, 0.92) 45%, rgba(255, 255, 255, 0.55)), #eaf3ff;
   border-top: 1px solid rgba(35, 59, 255, 0.18);
   border-bottom: 1px solid rgba(35, 59, 255, 0.18);
 }
@@ -3047,9 +3084,15 @@ html[data-theme="dark"] {
 .research-section .publications ol.bibliography li {
   border-bottom-color: rgba(35, 59, 255, 0.13) !important;
 
-  &:nth-child(3n + 1) .abbr abbr { color: var(--global-theme-color) !important; }
-  &:nth-child(3n + 2) .abbr abbr { color: var(--global-secondary-accent) !important; }
-  &:nth-child(3n) .abbr abbr { color: #1676c7 !important; }
+  &:nth-child(3n + 1) .abbr abbr {
+    color: var(--global-theme-color) !important;
+  }
+  &:nth-child(3n + 2) .abbr abbr {
+    color: var(--global-secondary-accent) !important;
+  }
+  &:nth-child(3n) .abbr abbr {
+    color: #1676c7 !important;
+  }
 
   .abbr abbr {
     font-weight: 800;
@@ -3082,10 +3125,8 @@ footer.sticky-bottom {
 
 html[data-theme="dark"] {
   .about-page .about-hero-shell {
-    background:
-      radial-gradient(circle at 82% 28%, rgba(119, 200, 255, 0.16) 0, rgba(119, 200, 255, 0.06) 18rem, transparent 34rem),
-      radial-gradient(circle at 17% 92%, rgba(255, 114, 119, 0.07) 0, transparent 22rem),
-      var(--global-bg-color);
+    background: radial-gradient(circle at 82% 28%, rgba(119, 200, 255, 0.16) 0, rgba(119, 200, 255, 0.06) 18rem, transparent 34rem),
+      radial-gradient(circle at 17% 92%, rgba(255, 114, 119, 0.07) 0, transparent 22rem), var(--global-bg-color);
     border-bottom-color: var(--global-theme-color);
   }
 
@@ -3101,8 +3142,7 @@ html[data-theme="dark"] {
   }
 
   .writing-section {
-    background:
-      linear-gradient(104deg, rgba(119, 200, 255, 0.12), rgba(21, 36, 74, 0.94) 48%, rgba(17, 28, 58, 0.96)),
+    background: linear-gradient(104deg, rgba(119, 200, 255, 0.12), rgba(21, 36, 74, 0.94) 48%, rgba(17, 28, 58, 0.96)),
       var(--global-soft-surface-color);
   }
 
@@ -3131,18 +3171,18 @@ html[data-theme="dark"] {
   }
 }
 
-
 // -----------------------------------------------------------------------------
 // Refined cobalt editorial pass: calmer, cleaner, portfolio-first
 // -----------------------------------------------------------------------------
 
 .about-page .about-hero-shell {
-  background:
-    radial-gradient(circle at 79% 30%, rgba(41, 72, 255, 0.055) 0, rgba(41, 72, 255, 0.025) 18rem, transparent 34rem),
+  background: radial-gradient(circle at 79% 30%, rgba(41, 72, 255, 0.055) 0, rgba(41, 72, 255, 0.025) 18rem, transparent 34rem),
     var(--global-bg-color);
   border-bottom: 1px solid var(--global-divider-color);
 
-  &::before { display: none; }
+  &::before {
+    display: none;
+  }
 
   &::after {
     opacity: 0.14;
@@ -3152,7 +3192,9 @@ html[data-theme="dark"] {
   }
 }
 
-.about-hero > h2:first-of-type::after { display: none; }
+.about-hero > h2:first-of-type::after {
+  display: none;
+}
 
 .profile.about-hero-profile {
   padding: 0;
@@ -3164,7 +3206,9 @@ html[data-theme="dark"] {
 
   figure,
   picture,
-  img { border-radius: 26px !important; }
+  img {
+    border-radius: 26px !important;
+  }
 
   img {
     filter: grayscale(100%) contrast(1.025);
@@ -3213,13 +3257,23 @@ html[data-theme="dark"] {
 }
 
 .impact-item {
-  &::before { display: none; }
-  &:nth-child(1) .impact-value { color: var(--global-theme-color); }
-  &:nth-child(2) .impact-value { color: var(--global-secondary-accent); }
-  &:nth-child(3) .impact-value { color: #3157c8; }
+  &::before {
+    display: none;
+  }
+  &:nth-child(1) .impact-value {
+    color: var(--global-theme-color);
+  }
+  &:nth-child(2) .impact-value {
+    color: var(--global-secondary-accent);
+  }
+  &:nth-child(3) .impact-value {
+    color: #3157c8;
+  }
 }
 
-.work-section { background: transparent; }
+.work-section {
+  background: transparent;
+}
 
 .work-grid {
   border-top: 1px solid var(--global-divider-color);
@@ -3227,27 +3281,41 @@ html[data-theme="dark"] {
 }
 
 .work-card {
-  &:hover { transform: none; }
+  &:hover {
+    transform: none;
+  }
 
   &:nth-child(1) {
     .work-index,
     .work-meta,
-    .work-link { color: var(--global-theme-color); }
-    &:hover { background: rgba(41, 72, 255, 0.035); }
+    .work-link {
+      color: var(--global-theme-color);
+    }
+    &:hover {
+      background: rgba(41, 72, 255, 0.035);
+    }
   }
 
   &:nth-child(2) {
     .work-index,
     .work-meta,
-    .work-link { color: var(--global-secondary-accent); }
-    &:hover { background: rgba(240, 74, 71, 0.03); }
+    .work-link {
+      color: var(--global-secondary-accent);
+    }
+    &:hover {
+      background: rgba(240, 74, 71, 0.03);
+    }
   }
 
   &:nth-child(3) {
     .work-index,
     .work-meta,
-    .work-link { color: #3157c8; }
-    &:hover { background: rgba(49, 87, 200, 0.035); }
+    .work-link {
+      color: #3157c8;
+    }
+    &:hover {
+      background: rgba(49, 87, 200, 0.035);
+    }
   }
 }
 
@@ -3257,16 +3325,26 @@ html[data-theme="dark"] {
   border-bottom: 1px solid rgba(41, 72, 255, 0.08);
 }
 
-.writing-section::before { display: none; }
+.writing-section::before {
+  display: none;
+}
 
 .research-section .publications ol.bibliography li {
   border-bottom-color: #e8eaf0 !important;
-  &:nth-child(3n + 1) .abbr abbr { color: var(--global-theme-color) !important; }
-  &:nth-child(3n + 2) .abbr abbr { color: #3157c8 !important; }
-  &:nth-child(3n) .abbr abbr { color: var(--global-secondary-accent) !important; }
+  &:nth-child(3n + 1) .abbr abbr {
+    color: var(--global-theme-color) !important;
+  }
+  &:nth-child(3n + 2) .abbr abbr {
+    color: #3157c8 !important;
+  }
+  &:nth-child(3n) .abbr abbr {
+    color: var(--global-secondary-accent) !important;
+  }
 }
 
-.navbar.navbar-light { border-bottom: 1px solid #e7e9ef; }
+.navbar.navbar-light {
+  border-bottom: 1px solid #e7e9ef;
+}
 
 footer.fixed-bottom,
 footer.sticky-bottom {
@@ -3276,8 +3354,7 @@ footer.sticky-bottom {
 
 html[data-theme="dark"] {
   .about-page .about-hero-shell {
-    background:
-      radial-gradient(circle at 79% 30%, rgba(125, 145, 255, 0.09) 0, rgba(125, 145, 255, 0.03) 18rem, transparent 34rem),
+    background: radial-gradient(circle at 79% 30%, rgba(125, 145, 255, 0.09) 0, rgba(125, 145, 255, 0.03) 18rem, transparent 34rem),
       var(--global-bg-color);
     border-bottom-color: var(--global-divider-color);
   }
@@ -3286,7 +3363,9 @@ html[data-theme="dark"] {
     background: transparent;
     border: 0;
     box-shadow: none;
-    img { box-shadow: 0 18px 46px rgba(0, 0, 0, 0.28); }
+    img {
+      box-shadow: 0 18px 46px rgba(0, 0, 0, 0.28);
+    }
   }
 
   .impact-grid {
@@ -3306,7 +3385,9 @@ html[data-theme="dark"] {
   }
 
   footer.fixed-bottom,
-  footer.sticky-bottom { background: #101827; }
+  footer.sticky-bottom {
+    background: #101827;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -3320,7 +3401,9 @@ html[data-theme="dark"] {
 
   .profile.about-hero-profile figure,
   .profile.about-hero-profile picture,
-  .profile.about-hero-profile img { border-radius: 20px !important; }
+  .profile.about-hero-profile img {
+    border-radius: 20px !important;
+  }
 }
 
 // -----------------------------------------------------------------------------
@@ -3593,9 +3676,15 @@ html[data-theme="dark"] {
     border-radius: 0 0 14px 14px;
   }
 
-  &:nth-child(1)::after { background: linear-gradient(90deg, #0b57d0, #34a853); }
-  &:nth-child(2)::after { background: linear-gradient(90deg, #ea4335, #fbbc04); }
-  &:nth-child(3)::after { background: linear-gradient(90deg, #0b57d0, #ea4335); }
+  &:nth-child(1)::after {
+    background: linear-gradient(90deg, #0b57d0, #34a853);
+  }
+  &:nth-child(2)::after {
+    background: linear-gradient(90deg, #ea4335, #fbbc04);
+  }
+  &:nth-child(3)::after {
+    background: linear-gradient(90deg, #0b57d0, #ea4335);
+  }
 
   &:hover {
     background: #f8fafd !important;
@@ -3779,13 +3868,18 @@ html[data-theme="dark"] {
   }
 }
 
-
 // -----------------------------------------------------------------------------
 // Google I/O typography + rule language
 // Strong display type, black structural rules, minimal decoration.
 // -----------------------------------------------------------------------------
 body {
-  font-family: "Google Sans Flex", "Google Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    "Google Sans Flex",
+    "Google Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   font-optical-sizing: auto;
 }
 
@@ -3795,7 +3889,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Google Sans Flex", "Google Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    "Google Sans Flex",
+    "Google Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   font-optical-sizing: auto;
 }
 
@@ -4185,7 +4285,9 @@ footer.sticky-bottom {
 }
 
 @media (max-width: 991.98px) {
-  html { font-size: 17px; }
+  html {
+    font-size: 17px;
+  }
 
   .about-hero-grid {
     width: min(100%, calc(100vw - 48px));
@@ -4208,7 +4310,9 @@ footer.sticky-bottom {
 }
 
 @media (max-width: 767.98px) {
-  html { font-size: 16px; }
+  html {
+    font-size: 16px;
+  }
 
   .navbar.navbar-light .container {
     padding-left: 1rem;
@@ -4351,9 +4455,15 @@ footer.sticky-bottom {
   display: none !important;
 }
 
-.work-card:nth-child(1) .work-index { color: #1a73e8 !important; }
-.work-card:nth-child(2) .work-index { color: #ea4335 !important; }
-.work-card:nth-child(3) .work-index { color: #34a853 !important; }
+.work-card:nth-child(1) .work-index {
+  color: #1a73e8 !important;
+}
+.work-card:nth-child(2) .work-index {
+  color: #ea4335 !important;
+}
+.work-card:nth-child(3) .work-index {
+  color: #34a853 !important;
+}
 
 .writing-section {
   background: #202124 !important;
@@ -5154,7 +5264,9 @@ body {
   border-radius: 20px !important;
   background: var(--io-surface) !important;
   box-shadow: none !important;
-  transition: background-color 150ms ease, color 150ms ease;
+  transition:
+    background-color 150ms ease,
+    color 150ms ease;
 }
 
 // I/O-like card hover: no lift/shadow; just a subtle surface change.
@@ -5358,7 +5470,6 @@ html[data-theme="dark"] {
   }
 }
 
-
 /* --------------------------------------------------------------------------
    Portfolio system consistency pass — creative I/O-inspired editorial system
    -------------------------------------------------------------------------- */
@@ -5557,9 +5668,20 @@ body,
   background: var(--portfolio-yellow);
 }
 
-.work-visual-1 i:nth-child(1) { right: 245px; bottom: 190px; }
-.work-visual-1 i:nth-child(2) { right: 184px; bottom: 266px; background: var(--portfolio-green); }
-.work-visual-1 i:nth-child(3) { right: 88px; bottom: 316px; background: var(--portfolio-blue); }
+.work-visual-1 i:nth-child(1) {
+  right: 245px;
+  bottom: 190px;
+}
+.work-visual-1 i:nth-child(2) {
+  right: 184px;
+  bottom: 266px;
+  background: var(--portfolio-green);
+}
+.work-visual-1 i:nth-child(3) {
+  right: 88px;
+  bottom: 316px;
+  background: var(--portfolio-blue);
+}
 
 .work-visual-2::before {
   content: "";
@@ -5579,9 +5701,20 @@ body,
   border-radius: 50%;
   background: var(--portfolio-red);
 }
-.work-visual-2 i:nth-child(1) { right: 128px; bottom: 72px; }
-.work-visual-2 i:nth-child(2) { right: 72px; bottom: 138px; background: var(--portfolio-blue); }
-.work-visual-2 i:nth-child(3) { right: 30px; bottom: 78px; background: var(--portfolio-green); }
+.work-visual-2 i:nth-child(1) {
+  right: 128px;
+  bottom: 72px;
+}
+.work-visual-2 i:nth-child(2) {
+  right: 72px;
+  bottom: 138px;
+  background: var(--portfolio-blue);
+}
+.work-visual-2 i:nth-child(3) {
+  right: 30px;
+  bottom: 78px;
+  background: var(--portfolio-green);
+}
 
 .work-visual-3::before,
 .work-visual-3::after {
@@ -5593,8 +5726,17 @@ body,
   background: var(--portfolio-green);
   transform-origin: right center;
 }
-.work-visual-3::before { width: 150px; bottom: 88px; transform: rotate(-16deg); }
-.work-visual-3::after { width: 110px; bottom: 50px; transform: rotate(11deg); background: var(--portfolio-blue); }
+.work-visual-3::before {
+  width: 150px;
+  bottom: 88px;
+  transform: rotate(-16deg);
+}
+.work-visual-3::after {
+  width: 110px;
+  bottom: 50px;
+  transform: rotate(11deg);
+  background: var(--portfolio-blue);
+}
 
 /* Impact: editorial metrics, not dashboard cards. */
 .impact-section {
@@ -5623,9 +5765,15 @@ body,
   border-left: 1px solid var(--portfolio-soft-rule) !important;
 }
 
-.impact-item:nth-child(1) .impact-value { color: var(--portfolio-blue) !important; }
-.impact-item:nth-child(2) .impact-value { color: var(--portfolio-red) !important; }
-.impact-item:nth-child(3) .impact-value { color: var(--portfolio-green) !important; }
+.impact-item:nth-child(1) .impact-value {
+  color: var(--portfolio-blue) !important;
+}
+.impact-item:nth-child(2) .impact-value {
+  color: var(--portfolio-red) !important;
+}
+.impact-item:nth-child(3) .impact-value {
+  color: var(--portfolio-green) !important;
+}
 
 /* Writing: lively editorial surface instead of a heavy black slab. */
 .writing-section {
@@ -5855,13 +6003,22 @@ html[data-theme="dark"] {
     background: rgba(23, 23, 23, 0.96) !important;
   }
 
-  .work-card-1 { background: #1f3158 !important; }
-  .work-card-2 { background: #463d1d !important; }
-  .work-card-3 { background: #173a28 !important; }
-  .writing-section { background: #302940 !important; }
-  .site-footer { background: #0f0f0f !important; }
+  .work-card-1 {
+    background: #1f3158 !important;
+  }
+  .work-card-2 {
+    background: #463d1d !important;
+  }
+  .work-card-3 {
+    background: #173a28 !important;
+  }
+  .writing-section {
+    background: #302940 !important;
+  }
+  .site-footer {
+    background: #0f0f0f !important;
+  }
 }
-
 
 /* --------------------------------------------------------------------------
    Personal portfolio rebalance — keep I/O clarity, remove company-site cues

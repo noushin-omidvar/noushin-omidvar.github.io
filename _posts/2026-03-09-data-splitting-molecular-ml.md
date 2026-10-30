@@ -482,4 +482,3 @@ Random splits mostly measure interpolation between similar molecules.
 Scaffold and cluster splits provide a more realistic test of **generalization across chemical space**.
 
 As molecular machine learning continues to influence drug discovery, materials design, and chemical engineering, careful evaluation will be just as important as model architecture.
-

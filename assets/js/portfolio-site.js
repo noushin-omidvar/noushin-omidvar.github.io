@@ -1,14 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
   const items = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("in");
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
     items.forEach((item) => io.observe(item));
   } else {
     items.forEach((item) => item.classList.add("in"));
@@ -52,8 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".publications-page .bibliography .abstract.btn").forEach((button) => {
     const item = button.closest("li");
     if (!item) return;
-    const target = [...item.querySelectorAll(".abstract")]
-      .find((el) => el !== button && !el.classList.contains("btn"));
+    const target = [...item.querySelectorAll(".abstract")].find((el) => el !== button && !el.classList.contains("btn"));
     if (!target) return;
 
     button.addEventListener("click", (event) => {

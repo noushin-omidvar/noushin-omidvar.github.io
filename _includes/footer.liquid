@@ -1,13 +1,20 @@
 {% if site.footer_fixed %}
   <footer class="fixed-bottom" role="contentinfo">
     <div class="container mt-0">
-      &copy; {{ site.time | date: '%Y' }} {{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}
+      &copy; {{ site.time | date: '%Y' }}
+      {{ site.first_name -}}
+      {%- if site.middle_name %} {{ site.middle_name }}{% endif %}
+      {{ site.last_name }}
     </div>
   </footer>
 {% else %}
   <footer class="site-footer personal-footer" role="contentinfo">
     <div class="footer-inner">
-      <p class="footer-name">{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}</p>
+      <p class="footer-name">
+        {{ site.first_name -}}
+        {%- if site.middle_name %} {{ site.middle_name }}{% endif %}
+        {{ site.last_name }}
+      </p>
       <div class="footer-social">{% include social.liquid %}</div>
       <p class="footer-copy">&copy; {{ site.time | date: '%Y' }} · Scientific ML, materials & AI for science</p>
     </div>
