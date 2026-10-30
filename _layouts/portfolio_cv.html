@@ -1,18 +1,21 @@
 ---
 layout: portfolio_base
 ---
+
 <section class="page-hero cv-hero">
   <div class="wrap narrow">
     <div class="eyebrow">curriculum vitae</div>
     <h1>Experience &amp; background</h1>
-    <p class="page-deck">Scientific machine learning for chemistry, materials, and engineering R&amp;D, with experience spanning molecular representation, predictive modeling, rigorous validation, ranking, multi-objective optimization, large-scale screening, and closed-loop work with experimental teams.</p>
+    <p class="page-deck">
+      Scientific machine learning for chemistry, materials, and engineering R&amp;D, with experience spanning molecular representation, predictive
+      modeling, rigorous validation, ranking, multi-objective optimization, large-scale screening, and closed-loop work with experimental teams.
+    </p>
     <a class="text-button" href="{{ '/assets/pdf/ML_Resume_red.pdf' | relative_url }}">Download PDF ↗</a>
   </div>
 </section>
 
 <section class="page-body">
   <div class="wrap narrow cv-sheet">
-
     <section class="cv-block">
       <div class="cv-block-head">Experience</div>
 
@@ -22,13 +25,34 @@ layout: portfolio_base
           <h2>Machine Learning Scientist</h2>
           <div class="cv-org">Aionics, Inc. · Palo Alto, CA</div>
           <ul>
-            <li>Built a closed-loop electrolyte design workflow: trained mixture-aware graph surrogates for ionic conductivity, viscosity, and flash point, ran constrained multi-objective optimization (NSGA-III), and shortlisted diverse Pareto candidates for laboratory testing.</li>
-            <li>Turned lab results into workflow changes with experimental collaborators: revised optimizer composition bounds after miscibility failures, and flagged a systematically overpredicted viscosity regime as unreliable for optimization.</li>
-            <li>Built learning-to-rank and experimental decision-support workflows across 1,400+ battery experiments, representing electrolyte mixtures from molecular, DFT-derived, and composition-aware features, with nested grouped cross-validation over held-out component combinations.</li>
-            <li>Developed molecular and mixture-property models for scientific screening, with reusable workflows for feature generation, training, validation, diagnostics, and comparison against strong baselines.</li>
-            <li>Built chemistry-aware benchmarking pipelines using similarity-based splits to evaluate how models generalize to structurally unfamiliar molecules.</li>
-            <li>Combined ML property models with thermodynamic and engineering constraints for large-scale candidate screening and multi-objective decision making.</li>
-            <li>Created reproducible Python workflows connecting raw scientific data, featurization, model artifacts, evaluation, visualization, and downstream engineering use.</li>
+            <li>
+              Built a closed-loop electrolyte design workflow: trained mixture-aware graph surrogates for ionic conductivity, viscosity, and flash
+              point, ran constrained multi-objective optimization (NSGA-III), and shortlisted diverse Pareto candidates for laboratory testing.
+            </li>
+            <li>
+              Turned lab results into workflow changes with experimental collaborators: revised optimizer composition bounds after miscibility
+              failures, and flagged a systematically overpredicted viscosity regime as unreliable for optimization.
+            </li>
+            <li>
+              Built learning-to-rank and experimental decision-support workflows across 1,400+ battery experiments, representing electrolyte mixtures
+              from molecular, DFT-derived, and composition-aware features, with nested grouped cross-validation over held-out component combinations.
+            </li>
+            <li>
+              Developed molecular and mixture-property models for scientific screening, with reusable workflows for feature generation, training,
+              validation, diagnostics, and comparison against strong baselines.
+            </li>
+            <li>
+              Built chemistry-aware benchmarking pipelines using similarity-based splits to evaluate how models generalize to structurally unfamiliar
+              molecules.
+            </li>
+            <li>
+              Combined ML property models with thermodynamic and engineering constraints for large-scale candidate screening and multi-objective
+              decision making.
+            </li>
+            <li>
+              Created reproducible Python workflows connecting raw scientific data, featurization, model artifacts, evaluation, visualization, and
+              downstream engineering use.
+            </li>
           </ul>
         </div>
       </article>
@@ -39,10 +63,22 @@ layout: portfolio_base
           <h2>Graduate Research Assistant</h2>
           <div class="cv-org">Virginia Tech · Department of Chemical Engineering</div>
           <ul>
-            <li>Developed interpretable and graph-based ML models linking DFT-derived physical, structural, and bonding descriptors to catalyst behavior.</li>
-            <li>Used graph neural networks and explainable ML to identify chemically meaningful structure-property relationships and guide catalyst design.</li>
-            <li>Applied a theory-infused GNN (Newns–Anderson chemisorption inside the model) in an active-learning loop with DFT, screening about 17,700 candidate surfaces to 155 for DFT validation.</li>
-            <li>Built reproducible scientific-computing workflows for data curation, featurization, modeling, validation, interpretation, and visualization.</li>
+            <li>
+              Developed interpretable and graph-based ML models linking DFT-derived physical, structural, and bonding descriptors to catalyst
+              behavior.
+            </li>
+            <li>
+              Used graph neural networks and explainable ML to identify chemically meaningful structure-property relationships and guide catalyst
+              design.
+            </li>
+            <li>
+              Applied a theory-infused GNN (Newns–Anderson chemisorption inside the model) in an active-learning loop with DFT, screening about 17,700
+              candidate surfaces to 155 for DFT validation.
+            </li>
+            <li>
+              Built reproducible scientific-computing workflows for data curation, featurization, modeling, validation, interpretation, and
+              visualization.
+            </li>
             <li>Contributed to peer-reviewed work spanning interpretable ML, graph learning, electrocatalysis, and materials discovery.</li>
           </ul>
         </div>
@@ -82,13 +118,12 @@ layout: portfolio_base
     <section class="cv-block">
       <div class="cv-block-head">Methods &amp; tools</div>
       <div class="skill-cloud">
-        <span>Python</span><span>PyTorch</span><span>scikit-learn</span><span>XGBoost</span>
-        <span>RDKit</span><span>Graph Neural Networks</span><span>Molecular Descriptors</span>
-        <span>DFT</span><span>Scientific ML</span><span>Learning to Rank</span>
-        <span>Multi-objective Optimization (NSGA-III)</span><span>Active Learning</span><span>Interpretable ML</span><span>Similarity-aware Validation</span><span>Nested Grouped CV</span>
-        <span>Weights &amp; Biases</span><span>Optuna</span><span>SQL</span><span>AWS</span><span>GCP</span>
+        <span>Python</span><span>PyTorch</span><span>scikit-learn</span><span>XGBoost</span> <span>RDKit</span><span>Graph Neural Networks</span
+        ><span>Molecular Descriptors</span> <span>DFT</span><span>Scientific ML</span><span>Learning to Rank</span>
+        <span>Multi-objective Optimization (NSGA-III)</span><span>Active Learning</span><span>Interpretable ML</span
+        ><span>Similarity-aware Validation</span><span>Nested Grouped CV</span> <span>Weights &amp; Biases</span><span>Optuna</span><span>SQL</span
+        ><span>AWS</span><span>GCP</span>
       </div>
     </section>
-
   </div>
 </section>

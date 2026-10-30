@@ -41,7 +41,13 @@ layout: default
                 <div class="portfolio-work-index" aria-hidden="true">0{{ forloop.index }}</div>
                 <div class="portfolio-work-content">
                   <p class="portfolio-work-meta">{{ item.meta }}</p>
-                  <h3>{% if item.url %}<a href="{{ item.url | relative_url }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</h3>
+                  <h3>
+                    {% if item.url -%}
+                      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                    {%- else -%}
+                      {{- item.title -}}
+                    {%- endif %}
+                  </h3>
                   <p class="portfolio-work-description">{{ item.description }}</p>
                   {% if item.url %}
                     <a class="portfolio-work-link" href="{{ item.url | relative_url }}">Read more <span aria-hidden="true">→</span></a>

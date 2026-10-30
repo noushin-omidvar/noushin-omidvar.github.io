@@ -28,7 +28,6 @@ description: Using a theory-infused graph neural network, active learning, and e
     </p>
   </div>
 
-
   <h2>The scientific question</h2>
 
   <p>
@@ -54,7 +53,6 @@ description: Using a theory-infused graph neural network, active learning, and e
     <li>Can the model explain the electronic mechanisms responsible for those changes in binding?</li>
   </ul>
 
-
   <div class="stats-grid">
     <div>
       <span class="stat-number">1,518</span>
@@ -75,8 +73,8 @@ description: Using a theory-infused graph neural network, active learning, and e
       <span class="stat-number">0.05 eV</span>
       <span class="stat-label">cross-validated MAE</span>
     </div>
-  </div>
 
+  </div>
 
   <h2>Why a theory-infused neural network?</h2>
 
@@ -107,7 +105,6 @@ description: Using a theory-infused graph neural network, active learning, and e
     representation itself more closely connected to established surface-science theory.
   </p>
 
-
   <h2>Searching the catalyst space with active learning</h2>
 
   <p>
@@ -131,7 +128,6 @@ description: Using a theory-infused graph neural network, active learning, and e
     <strong>0.04 eV</strong>.
   </p>
 
-
   <h2>From prediction to catalyst screening</h2>
 
   <p>
@@ -152,7 +148,6 @@ description: Using a theory-infused graph neural network, active learning, and e
     with near-optimal predicted reactivity. Cost filtering further highlighted
     candidate cores containing earth-abundant elements such as Fe, Co, and Ni.
   </p>
-
 
   <h2>What did the model actually learn?</h2>
 
@@ -175,6 +170,7 @@ description: Using a theory-infused graph neural network, active learning, and e
       <strong>Local explanations</strong> decomposed the change in binding energy
       for individual alloy surfaces relative to a reference such as Pt(111).
     </li>
+
   </ul>
 
   <p>
@@ -189,7 +185,6 @@ description: Using a theory-infused graph neural network, active learning, and e
     adsorbate–metal antibonding states and therefore help explain why apparently
     similar Pt sites can exhibit different *OH binding strengths.
   </p>
-
 
   <h2>A concrete example: Pt₃Co@Pt<sub>ML</sub></h2>
 
@@ -212,7 +207,6 @@ description: Using a theory-infused graph neural network, active learning, and e
     interactions with *OH.
   </p>
 
-
   <h2>The scientific insight</h2>
 
   <p>
@@ -234,7 +228,6 @@ description: Using a theory-infused graph neural network, active learning, and e
     surface reactivity. This provides a richer picture of chemisorption than relying
     on a single conventional descriptor such as the d-band center.
   </p>
-
 
   <h2>What I took from this project</h2>
 
@@ -260,8 +253,8 @@ description: Using a theory-infused graph neural network, active learning, and e
       Active learning, uncertainty estimation, DFT validation, and the ORR activity
       descriptor were all part of the discovery loop.
     </li>
-  </ul>
 
+  </ul>
 
   <p class="case-study-note">
     Omidvar et al., Electrochemical Science Advances, 2024.
