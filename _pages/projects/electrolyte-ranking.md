@@ -1,54 +1,52 @@
 ---
 layout: portfolio_page
 permalink: /projects/electrolyte-ranking/
-title: Learning to rank electrolyte formulations
+title: Learning to rank electrolyte formulations by cycle life
 kicker: industry case study · battery r&d
-description: A scientific ML workflow for moving from component chemistry to formulation-level ranking and experimental prioritization.
+description: Ranking electrolyte formulations for experimental prioritization, with features built from component chemistry and validation on held-out component combinations.
 ---
 
 <div class="case-study-shell">
-  <div class="case-study-intro">
-    <p class="lead">This project focused on a pragmatic question: <strong>when battery experiments are expensive, how do we decide which formulations to test first?</strong> The objective was not only to predict a response, but to build a model and evaluation framework aligned with prioritization.</p>
+
+  <div class="case-summary">
+    <div><span class="label">Question</span><p>Cycling experiments are slow and expensive. Which formulations should the lab test first?</p></div>
+    <div><span class="label">Approach</span><p>Formulation features aggregated from component chemistry, with a tree-based learning-to-rank model.</p></div>
+    <div><span class="label">Result</span><p>NDCG@10 ≈ 0.95 and Spearman ≈ 0.66 on held-out component combinations.</p></div>
+    <div><span class="label">My role</span><p>Problem framing, featurization, modeling, and validation design.</p></div>
   </div>
 
   <div class="project-figure-block">
-    <img src="{{ '/assets/img/projects/electrolyte-overview.svg' | relative_url }}" alt="Workflow from molecules to descriptors to formulation representation to ranking model to prioritized formulations">
-    <p class="figure-caption">Figure 1. A simplified view of the end-to-end workflow, from component-level chemistry to a formulation-level ranking signal.</p>
+    <img src="{{ '/assets/img/projects/ranking-workflow.png' | relative_url }}" alt="Workflow from molecules to descriptors, mixture representation, ranking model, and prioritized formulations">
+    <p class="figure-caption">From component chemistry to a ranked list of formulations for the lab.</p>
   </div>
 
-  <h2>The scientific problem</h2>
-  <p>Electrolytes are mixtures, not single molecules. Their performance depends on the combination of solvents, salts, and additives, yet experimental cycling campaigns are costly and relatively sparse. The practical goal was to help R&amp;D teams identify strong candidates faster from a set of possible formulations.</p>
-
   <div class="stats-grid">
-    <div><span class="stat-number">1,424</span><span class="stat-label">battery experiments</span></div>
+    <div><span class="stat-number">1,424</span><span class="stat-label">cycling experiments</span></div>
     <div><span class="stat-number">158</span><span class="stat-label">formulations</span></div>
     <div><span class="stat-number">≈ 0.95</span><span class="stat-label">NDCG@10</span></div>
     <div><span class="stat-number">≈ 0.66</span><span class="stat-label">Spearman</span></div>
   </div>
 
-  <h2>Why ranking instead of only regression?</h2>
-  <p>The business decision was not simply “what exact lifetime will this cell achieve?” It was closer to “which candidates deserve attention first?” That made learning-to-rank a natural formulation. Regression still matters for understanding signals in the data, but ranking aligns better with top-candidate discovery.</p>
+  <h2>Why ranking, not regression</h2>
+  <p>The lab's decision was not "what exact cycle life will this cell reach?" but "which candidates deserve the next experiments?" That made learning to rank the natural objective, and ranking metrics the natural way to judge it: NDCG@10 asks whether the best formulations reach the top of the list, and Spearman asks whether the overall order is meaningful.</p>
 
-  <div class="project-figure-block">
-    <img src="{{ '/assets/img/projects/electrolyte-ranking-metrics.svg' | relative_url }}" alt="Side-by-side comparison of a regression question and a ranking question, plus a visual summary of NDCG and Spearman metrics">
-    <p class="figure-caption">Figure 2. The task framing drove the evaluation: top-K quality and order mattered, so I used ranking-oriented metrics such as NDCG alongside Spearman correlation.</p>
-  </div>
-
-  <h2>Representation</h2>
-  <p>Each formulation was built from component-level chemistry. Molecular and physics-derived features were computed for individual ingredients, then aggregated into a formulation-level representation using composition-aware statistics such as weighted means, minima, maxima, ranges, and variation summaries. This created a fixed-length representation for mixtures while preserving chemical information from the components.</p>
-
-  <h2>Modeling approach</h2>
-  <p>I used a tree-based learning-to-rank workflow with strong classical descriptors as the baseline representation. The emphasis was not on using the most fashionable architecture, but on finding a robust workflow that generalized well under the available data and matched the experimental decision process.</p>
+  <h2>Representing a mixture</h2>
+  <p>An electrolyte is a mixture of solvents, salts, and additives. I computed molecular and DFT-derived descriptors for each component and aggregated them into fixed-length formulation features using composition-weighted means, minima, maxima, and ranges.</p>
 
   <h2>Validation</h2>
-  <p>Because top-candidate identification mattered, I used <strong>NDCG</strong> to measure whether the most promising formulations were surfaced near the top of the ranking, and <strong>Spearman</strong> to measure the quality of ordering more broadly. This helped evaluate both “did we recover the best candidates?” and “was the relative ordering meaningful?”</p>
+  <p>The 1,424 experiments include replicate cells of the same formulation, and formulations that share components are not independent, so a random split would leak information. I used nested grouped cross-validation that held out whole component combinations: the model was always scored on formulations whose component set it had not seen during training or tuning.</p>
+  <!-- FILL IN if allowed (one sentence; strongly recommended):
+  <p>For comparison, a [random ranking / simple heuristic, e.g. rank by salt concentration] scored NDCG@10 ≈ __ on the same folds. Reported values are mean ± std over outer folds (NDCG@10 0.95 ± __, Spearman 0.66 ± __).</p>
+  -->
 
-  <h2>What this project taught me</h2>
+  <h2>Limitations</h2>
   <ul>
-    <li><strong>Prediction is not the same as a decision.</strong> In scientific ML, the right objective often comes from the downstream workflow.</li>
-    <li><strong>Mixture problems need careful representation.</strong> Component-level descriptors must be translated into formulation-level features deliberately.</li>
-    <li><strong>Metrics should follow the task.</strong> A ranking model should be judged with ranking-aware metrics, not only generic regression scores.</li>
+    <li>158 formulations is a small set, so the ranking is most reliable within the chemistry the campaign covered.</li>
+    <li>Aggregate mixture features cannot represent specific component–component interactions.</li>
   </ul>
+
+  <h2>Takeaway</h2>
+  <p>The downstream decision should set the objective and the metric. Here that meant ranking, and validation that respects how mixtures share components.</p>
 
   <p class="case-study-note">Public-facing summary of private industry work.</p>
 </div>

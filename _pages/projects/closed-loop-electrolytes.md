@@ -9,7 +9,12 @@ description: Predicting mixture properties, optimizing under constraints, and le
 
 <div class="case-study-shell">
 
-<p class="lead">The goal was not just to predict properties of existing electrolytes. It was to propose new formulations, test them with experimental collaborators, and use what the lab found to improve the next round.</p>
+<div class="case-summary">
+  <div><span class="label">Question</span><p>Can we propose new electrolyte formulations, test them in the lab, and use what the lab finds to improve the next round?</p></div>
+  <div><span class="label">Approach</span><p>Mixture-aware GNN surrogates (DiffMix) for conductivity, viscosity, and flash point, with constrained multi-objective optimization (NSGA-III).</p></div>
+  <div><span class="label">Result</span><p>Diverse candidates went to lab testing. Lab results led to revised composition bounds and a flagged unreliable viscosity regime.</p></div>
+  <div><span class="label">My role</span><p>Built the training data, trained and validated the surrogates, connected them to the optimizer, and worked with experimental collaborators on the feedback.</p></div>
+</div>
 
 <figure class="project-figure-block">
   <img src="{{ '/assets/img/projects/closed-loop-overview.png' | relative_url }}" alt="Closed-loop workflow: predict properties with a mixture model, search with constrained multi-objective optimization, test in the lab, and refine the search from lab feedback">
@@ -45,6 +50,17 @@ description: Predicting mixture properties, optimizing under constraints, and le
 </figure>
 
 <p><strong>Model reliability.</strong> For a group of measured formulations, viscosity was systematically overpredicted, with every error in the same direction. After repeat measurements and calibration checks ruled out the instrument, the poorly predicted formulations turned out to share a concentrated-electrolyte regime that was underrepresented in the training data. We flagged predictions in that regime as unreliable for candidate prioritization and targeted it for new training data.</p>
+
+<h2>Limitations</h2>
+
+<ul>
+  <li>Miscibility was not modeled; it is handled through constraints learned from lab failures, so new chemistries can still fail in new ways.</li>
+  <li>Surrogate reliability varies by regime; predictions in the flagged concentrated regime need more training data before they can drive selection.</li>
+</ul>
+
+<!-- FILL IN only if Aionics approves (one or two sentences):
+<p>Across __ design rounds, __ candidates were shortlisted and __ tested. After the bounds were revised, the share of proposals that could be prepared rose from __% to __%. On held-out component combinations the surrogates reached [metric] of __ for viscosity and __ for conductivity.</p>
+-->
 
 <h2>What I took from it</h2>
 
