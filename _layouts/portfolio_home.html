@@ -53,28 +53,21 @@ layout: portfolio_base
   </div>
 </section>
 
-<section class="impact-band" aria-label="Selected outcomes">
-  <div class="wrap impact-grid">
-    <a class="impact" href="{{ '/projects/closed-loop-electrolytes/' | relative_url }}">
-      <span class="impact-number impact-loop">Lab&nbsp;→&nbsp;model</span>
-      <span class="impact-label">Lab results reshaped the optimizer's constraints and the trust placed in the model</span>
-    </a>
-    <a class="impact" href="{{ '/projects/electrolyte-ranking/' | relative_url }}">
-      <span class="impact-number">1,424</span>
-      <span class="impact-label">cycling experiments used to rank formulations, NDCG@10 ≈ 0.95 on held-out component sets</span>
-    </a>
-    <a class="impact" href="{{ '/projects/orc-screening/' | relative_url }}">
-      <span class="impact-number">~800M → 19</span>
-      <span class="impact-label">molecules screened to an engineering shortlist with ML and equation-of-state physics</span>
-    </a>
-    <a class="impact" href="{{ '/projects/catalyst-discovery/' | relative_url }}">
-      <span class="impact-number">~17,700 → 155</span>
-      <span class="impact-label">catalyst surfaces narrowed to DFT checks with a theory-infused GNN and active learning</span>
-    </a>
-  </div>
-</section>
-
 <div class="wrap home-flow">
+  <section class="home-section" aria-labelledby="approach-title">
+    <div class="section-head">
+      <span class="eyebrow">how i work</span>
+      <h2 id="approach-title">From chemistry to decisions</h2>
+    </div>
+    <ol class="flow-line" aria-label="Scientific machine learning workflow">
+      <li><b>Represent</b><span>descriptors, graphs, DFT and mixture features</span></li>
+      <li><b>Learn</b><span>ranking, graph ML, strong classical baselines</span></li>
+      <li><b>Validate</b><span>similarity-aware splits, task-aligned metrics</span></li>
+      <li><b>Decide</b><span>ranking, constrained and multi-objective search</span></li>
+      <li class="flow-line-feedback"><b>Learn from the lab</b><span>revised constraints, reliability flags</span></li>
+    </ol>
+  </section>
+
   <section class="home-section" id="work" aria-labelledby="work-title">
     <div class="section-head">
       <span class="eyebrow">selected work</span>
@@ -126,20 +119,6 @@ layout: portfolio_base
         </div>
       </article>
     </div>
-  </section>
-
-  <section class="home-section" aria-labelledby="approach-title">
-    <div class="section-head">
-      <span class="eyebrow">how i work</span>
-      <h2 id="approach-title">From chemistry to decisions</h2>
-    </div>
-    <ol class="flow-line" aria-label="Scientific machine learning workflow">
-      <li><b>Represent</b><span>descriptors, graphs, DFT and mixture features</span></li>
-      <li><b>Learn</b><span>ranking, graph ML, strong classical baselines</span></li>
-      <li><b>Validate</b><span>similarity-aware splits, task-aligned metrics</span></li>
-      <li><b>Decide</b><span>ranking, constrained and multi-objective search</span></li>
-      <li class="flow-line-feedback"><b>Learn from the lab</b><span>revised constraints, reliability flags</span></li>
-    </ol>
   </section>
 
   <section class="home-section" aria-labelledby="research-home-title">

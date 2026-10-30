@@ -654,7 +654,8 @@ body::before {
 .flow-line b { display: block; font-size: 16px; color: var(--ink); margin-bottom: 4px; }
 .flow-line b::after { content: " →"; color: var(--cobalt); }
 .flow-line li:last-child b::after { content: " ↺"; color: var(--feedback); }
-.flow-line span { font-size: 14px; line-height: 1.45; color: var(--graphite); }
+.flow-line span { display: block; font-size: 14px; line-height: 1.45; color: var(--graphite); }
+.flow-line li { line-height: 1.45; }
 .flow-line-feedback b { color: var(--feedback); }
 
 .home-flow .personal-note { margin-top: 56px; }
